@@ -36,10 +36,10 @@ def sales_blocks(description=None):
 for product in P.values():
  blocks=[p(product['summary']),p('製品・機種名：'+product['model']+' ｜ 分類：'+product['category'])]
  if '発売予定' in product['status']:blocks += [p(product['status'])]
- blocks += sales_blocks(product['sales_description'])
+ if product.get('sales_description'):blocks += sales_blocks(product['sales_description'])
  blocks += [h('こんな用途に'),ul([ulink(s) for s in product['uses']]),h('主な機能・構成'),ul(product['features']),h('仕様・対応条件'),table(['項目','内容'],product['specs']),h('導入・使用条件'),ul(product['conditions'])]
  blocks += source_blocks(product)+[h('関連する製品'),ul([plink(s) for s in product['related']])]
- add('products/'+product['slug']+'.html',product['name'],product['sales_description']+' '+product['summary'],blocks,product=product)
+ add('products/'+product['slug']+'.html',product['name'],(product.get('sales_description','')+' '+product['summary']).strip(),blocks,product=product)
 for use in U.values():
  blocks=[p(use['summary'])]+[p(t) for t in use['body']]+[h('候補になる製品'),table(['製品','概要'],[[plink(s),P[s]['summary']] for s in use['products']])]
  if any(P[slug]['category']=='業務用ボディカメラ' for slug in use['products']):blocks[1:1]=sales_blocks(sales['body_camera_description'])
@@ -50,7 +50,7 @@ for use in U.values():
  blocks += [h('導入相談で確認すること'),ul(use['questions']),p(a('製品の選び方と導入相談','contact.html'))]
  add('uses/'+use['slug']+'.html',use['title'],use['summary'],blocks)
 for comp in data['comparisons']:
- add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*sales_blocks(sales['body_camera_description'] if comp['slug']=='body-camera' else None),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])])
+ add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*(sales_blocks(sales['body_camera_description']) if comp['slug']=='body-camera' else []),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])])
 
 add('index.html','INBYTE 製品・用途ガイド','車両の安全確認、現場安全管理、AI外観検査、ボディカメラ。INBYTEの製品を用途・構成・仕様から選べます。',[
  p('車両の人身事故防止、作業現場の安全管理、製造ラインの検査、安全教育・点検・接客などの業務記録。解決したい課題から、INBYTEの製品と必要な構成を確認できます。'),
@@ -131,8 +131,8 @@ def build(out,base,production):
    web={'@type':page['kind'],'@id':canonical+'#webpage','url':canonical,'name':page['title'],'description':page['description'],'inLanguage':'ja','dateModified':config['updated'],'publisher':{'@id':org['@id']}}
    if page['product']:
     prod=page['product'];pid=canonical+'#product'
-    graph.append({'@type':'Product','@id':pid,'name':prod['name'],'model':prod['model'],'description':prod['sales_description']+' '+prod['summary'],'category':prod['category'],'url':canonical})
-    if '発売予定' not in prod['status']:
+    graph.append({'@type':'Product','@id':pid,'name':prod['name'],'model':prod['model'],'description':(prod.get('sales_description','')+' '+prod['summary']).strip(),'category':prod['category'],'url':canonical})
+    if prod.get('sales_description') and '発売予定' not in prod['status']:
      graph[0]['offers']={'@type':'Offer','url':sales['contact_url'],'seller':{'@id':org['@id']},'description':prod['sales_description']}
     web['mainEntity']={'@id':pid}
    graph += [org,web,{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':t,'item':urljoin(base,href)} for i,(t,href) in enumerate(crumb)]}]
