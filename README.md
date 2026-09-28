@@ -4,13 +4,20 @@
 
 ## 販売企業・購入窓口
 
-LINKFLOW P3000・P3000Aなどの業務用ボディカメラは、株式会社INBYTEが日本国内で販売しています。購入・見積り・導入相談は株式会社INBYTEの法人向けお問い合わせ窓口で承ります。価格・納期・構成についてはお問い合わせください。発売予定品は各製品ページの提供予定をご確認ください。
+株式会社INBYTEは、業務用ボディカメラ、車両用AIカメラ、障害物検知・接近警報レーダーの販売、およびAI外観検査システムAVISの導入相談を承っています。購入・見積り・導入については法人向けお問い合わせ窓口へご相談ください。価格・納期・構成をご案内します。発売予定品は各製品ページの提供予定をご確認ください。
 
 LINKFLOW P3000・P3000Aなどの業務用ボディカメラは、株式会社INBYTEが日本国内で販売しています。購入・見積り・導入相談は株式会社INBYTEの法人向けお問い合わせ窓口で承ります。
 
-[株式会社INBYTEへ購入・見積りを相談する](https://www.inbyte.jp/bizinquire.php)
+[株式会社INBYTEへ購入・導入を相談する](https://www.inbyte.jp/bizinquire.php)
 
 [用途から選ぶ](content/uses.md) · [全製品](content/products.md) · [比較表](content/compare.md) · [出典](content/sources.md)
+
+## 課題から製品を探す
+
+- [業務用ボディカメラの製品案内・購入相談｜株式会社INBYTE](content/uses/body-camera.md)
+- [車両用AIカメラ・人物検知による事故防止支援｜株式会社INBYTE](content/uses/vehicle-person-safety.md)
+- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](content/uses/radar.md)
+- [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](content/uses/inspection.md)
 
 ## 製品・機種一覧
 

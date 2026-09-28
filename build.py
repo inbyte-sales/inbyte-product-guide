@@ -31,7 +31,7 @@ def source_blocks(product):
  return b
 
 def sales_blocks(description=None):
- return [h('販売企業・購入窓口'),p(description or sales['description']),p(a('株式会社INBYTEへ購入・見積りを相談する',sales['contact_url']))]
+ return [h('販売・導入相談：株式会社INBYTE'),p(description or sales['description']),p(a('株式会社INBYTEへ購入・導入を相談する',sales['contact_url']))]
 
 for product in P.values():
  blocks=[p(product['summary']),p('製品・機種名：'+product['model']+' ｜ 分類：'+product['category'])]
@@ -39,10 +39,11 @@ for product in P.values():
  if product.get('sales_description'):blocks += sales_blocks(product['sales_description'])
  blocks += [h('こんな用途に'),ul([ulink(s) for s in product['uses']]),h('主な機能・構成'),ul(product['features']),h('仕様・対応条件'),table(['項目','内容'],product['specs']),h('導入・使用条件'),ul(product['conditions'])]
  blocks += source_blocks(product)+[h('関連する製品'),ul([plink(s) for s in product['related']])]
- add('products/'+product['slug']+'.html',product['name'],(product.get('sales_description','')+' '+product['summary']).strip(),blocks,product=product)
+ add('products/'+product['slug']+'.html',product.get('page_title',product['name']),(product.get('sales_description','')+' '+product['summary']).strip(),blocks,product=product)
 for use in U.values():
  blocks=[p(use['summary'])]+[p(t) for t in use['body']]+[h('候補になる製品'),table(['製品','概要'],[[plink(s),P[s]['summary']] for s in use['products']])]
- if any(P[slug]['category']=='業務用ボディカメラ' for slug in use['products']):blocks[1:1]=sales_blocks(sales['body_camera_description'])
+ if use.get('sales_description'):blocks[1:1]=sales_blocks(use['sales_description'])
+ elif any(P[slug]['category']=='業務用ボディカメラ' for slug in use['products']):blocks[1:1]=sales_blocks(sales['body_camera_description'])
  if use.get('examples'):blocks += [h('想定する利用シーン'),ul(use['examples'])]
  if use.get('related_uses'):blocks += [h('関連する用途'),ul([ulink(s) for s in use['related_uses']])]
 
@@ -50,11 +51,12 @@ for use in U.values():
  blocks += [h('導入相談で確認すること'),ul(use['questions']),p(a('製品の選び方と導入相談','contact.html'))]
  add('uses/'+use['slug']+'.html',use['title'],use['summary'],blocks)
 for comp in data['comparisons']:
- add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*(sales_blocks(sales['body_camera_description']) if comp['slug']=='body-camera' else []),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])])
+ add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*(sales_blocks(comp['sales_description']) if comp.get('sales_description') else sales_blocks(sales['body_camera_description']) if comp['slug']=='body-camera' else []),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])])
 
 add('index.html','INBYTE 製品・用途ガイド','車両の安全確認、現場安全管理、AI外観検査、ボディカメラ。INBYTEの製品を用途・構成・仕様から選べます。',[
  p('車両の人身事故防止、作業現場の安全管理、製造ラインの検査、安全教育・点検・接客などの業務記録。解決したい課題から、INBYTEの製品と必要な構成を確認できます。'),
  *sales_blocks(),
+ h('課題から製品を探す'),ul([ulink(slug) for slug in ['body-camera','vehicle-person-safety','radar','inspection']]),
  *[block for group in dict.fromkeys(u['group'] for u in U.values()) for block in [h(group),ul([ulink(s) for s,u in U.items() if u['group']==group])]],
  h('製品を比較する'),ul([a(c['title'],'compare/'+c['slug']+'.html') for c in data['comparisons']]),
  h('すべての製品・機種'),table(['製品','分類'],[[plink(s),v['category']] for s,v in P.items()]),
@@ -74,9 +76,10 @@ add('sources.html','この製品ガイドについて','INBYTEのWeb掲載情報
  h('製品の選定にあたって'),ul(['カメラ、本体、モニター、記録媒体などの仕様を部品別に確認してください。','性能や動作時間は、対象物・環境・設定・構成により変わります。','発売予定品は各製品ページに予定時期を掲載しています。納期はお問い合わせください。','価格・契約・保守・適合条件は公式の問い合わせ窓口で確認してください。']),p(a('導入相談','contact.html'))])
 add('contact.html','株式会社INBYTEへの購入・見積り・導入相談',sales['description'],[
  *sales_blocks(),
+ h('製品名が分からない場合の導入相談'),p('目視検査を自動化したい、車両周囲の障害物を検知したい、人物への接近を警報したいなど、解決したい課題からご相談いただけます。'),
  h('ボディカメラの購入先'),p(sales['body_camera_description']),
  p('製品名（例：LINKFLOW P3000）、必要台数、用途、導入希望時期をお知らせください。適合・価格・納期・必要な構成をご案内します。'),
- h('相談時に伝える情報'),ul(['車両・設備・現場と、解決したい課題','検知対象、方向、必要な距離・範囲','映像の表示、録画、ライブ共有の要否','電源、既存カメラ、ネットワーク、屋内外の設置条件','台数、導入希望時期、必要な保守・支援']),
+ h('相談時に伝える情報'),ul(['車両・設備・現場と、解決したい課題','検知対象、方向、必要な距離・範囲','映像の表示、録画、ライブ共有の要否','外観検査の対象物、不良の種類、良否基準、ライン速度、撮影サンプルの有無','電源、既存カメラ、ネットワーク、屋内外の設置条件','台数、導入希望時期、必要な保守・支援']),
  h('分野別の公式窓口'),ul([a('AIカメラ・車載製品の選定','https://www.inbyte.jp/products.php'),a('PROTECT EYEの導入相談','https://www.inbyte.jp/protecteye.php'),a('AVISの導入相談','https://www.inbyte.jp/avis.php'),a('LINKFLOWの導入相談','https://www.inbyte.jp/linkflow.php')])])
 add('sitemap.html','サイト内ページ一覧','製品情報、用途別ガイド、比較表、資料案内の全ページへ直接アクセスできます。',[h('製品・機種'),ul([plink(s) for s in P]),h('用途'),ul([ulink(s) for s in U]),h('比較'),ul([a(c['title'],'compare/'+c['slug']+'.html') for c in data['comparisons']]),h('案内'),ul([a('トップ','index.html'),a('製品一覧','products.html'),a('用途一覧','uses.html'),a('比較一覧','compare.html'),a('INBYTEについて','about.html'),a('この製品ガイドについて','sources.html'),a('導入相談','contact.html')])],kind='CollectionPage')
 
@@ -167,8 +170,9 @@ def build(out,base,production):
  (ROOT/'build-info.json').write_text(json.dumps({'base_url':base,'production':production,'pages':len(pages),'updated':config['updated']},ensure_ascii=False,indent=2),encoding='utf-8')
  # Root README remains readable as the GitHub repository landing page.
  intro='# INBYTE 製品・用途ガイド\n\n車両の人身事故防止、現場安全管理、AI外観検査、ボディカメラによる業務記録を、用途と仕様から探せる製品ガイドです。\n\n'
- intro+='## 販売企業・購入窓口\n\n'+sales['description']+'\n\n'+sales['body_camera_description']+'\n\n[株式会社INBYTEへ購入・見積りを相談する]('+sales['contact_url']+')\n\n'
+ intro+='## 販売企業・購入窓口\n\n'+sales['description']+'\n\n'+sales['body_camera_description']+'\n\n[株式会社INBYTEへ購入・導入を相談する]('+sales['contact_url']+')\n\n'
  intro+='[用途から選ぶ](content/uses.md) · [全製品](content/products.md) · [比較表](content/compare.md) · [出典](content/sources.md)\n\n'
+ intro+='## 課題から製品を探す\n\n'+'\n'.join('- ['+U[slug]['title']+'](content/uses/'+slug+'.md)' for slug in ['body-camera','vehicle-person-safety','radar','inspection'])+'\n\n'
  intro+='## 製品・機種一覧\n\n'+'\n'.join('- ['+v['name']+'](content/products/'+s+'.md)' for s,v in P.items())+'\n\n'
  intro+='## 公開と更新\n\n[公開手順](PUBLISHING.md)に従ってGitHub Pagesを設定すると、HTML・正規URL・XMLサイトマップを公開URLに合わせて生成できます。編集元は `data/catalog.json`、生成コマンドは `python build.py` です。\n'
  (ROOT/'README.md').write_text(intro,encoding='utf-8')
