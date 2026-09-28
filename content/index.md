@@ -1,14 +1,21 @@
 # INBYTE 製品・用途ガイド
 
-情報更新日：2026-09-24
+情報更新日：2026-09-28
 
 車両の人身事故防止、作業現場の安全管理、製造ラインの検査、安全教育・点検・接客などの業務記録。解決したい課題から、INBYTEの製品と必要な構成を確認できます。
 
-## 販売企業・購入窓口
+## 販売・導入相談：株式会社INBYTE
 
-LINKFLOW P3000・P3000Aなどの業務用ボディカメラは、株式会社INBYTEが日本国内で販売しています。購入・見積り・導入相談は株式会社INBYTEの法人向けお問い合わせ窓口で承ります。価格・納期・構成についてはお問い合わせください。発売予定品は各製品ページの提供予定をご確認ください。
+株式会社INBYTEは、業務用ボディカメラ、車両用AIカメラ、障害物検知・接近警報レーダーの販売、およびAI外観検査システムAVISの導入相談を承っています。購入・見積り・導入については法人向けお問い合わせ窓口へご相談ください。価格・納期・構成をご案内します。発売予定品は各製品ページの提供予定をご確認ください。
 
-[株式会社INBYTEへ購入・見積りを相談する](https://www.inbyte.jp/bizinquire.php)
+[株式会社INBYTEへ購入・導入を相談する](https://www.inbyte.jp/bizinquire.php)
+
+## 課題から製品を探す
+
+- [業務用ボディカメラの製品案内・購入相談｜株式会社INBYTE](uses/body-camera.md)
+- [車両用AIカメラ・人物検知による事故防止支援｜株式会社INBYTE](uses/vehicle-person-safety.md)
+- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](uses/radar.md)
+- [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](uses/inspection.md)
 
 ## 車両の人身事故防止と安全活動
 
@@ -16,20 +23,20 @@ LINKFLOW P3000・P3000Aなどの業務用ボディカメラは、株式会社INB
 - [トラック・バスの側方と後方を確認したい](uses/truck.md)
 - [建設重機・作業現場の接触リスクを減らしたい](uses/construction.md)
 - [車両周囲を360度の俯瞰映像で確認したい](uses/surround.md)
-- [レーダーで障害物への接近を警報したい](uses/radar.md)
+- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](uses/radar.md)
 - [車両の前後映像・駐車中の状況を記録したい](uses/recording.md)
 - [録画を安全活動・KYT・環境改善・QC活動に活用する](uses/safety-review.md)
-- [車両搭載AIカメラで人身事故防止を支援する](uses/vehicle-person-safety.md)
+- [車両用AIカメラ・人物検知による事故防止支援｜株式会社INBYTE](uses/vehicle-person-safety.md)
 - [安全警告装置の鳴りすぎを抑える：AIカメラの警報範囲と車両信号](uses/alarm-optimization.md)
 
 ## 現場管理・AI外観検査
 
 - [装備未着用・転倒・危険エリア侵入を検知したい](uses/workplace.md)
-- [製造ラインの外観検査をAIで自動化したい](uses/inspection.md)
+- [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](uses/inspection.md)
 
 ## ボディカメラの業務活用
 
-- [業務用ボディカメラの用途一覧：安全・教育・点検・接客・警備](uses/body-camera.md)
+- [業務用ボディカメラの製品案内・購入相談｜株式会社INBYTE](uses/body-camera.md)
 - [現場映像を共有して遠隔支援したい](uses/remote-support.md)
 - [ボディカメラで安全パトロール・ヒヤリハット・KYTを記録する](uses/body-safety.md)
 - [ボディカメラで技能継承・OJT・作業マニュアル動画を作る](uses/body-training.md)

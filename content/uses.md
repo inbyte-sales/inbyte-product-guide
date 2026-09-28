@@ -1,6 +1,6 @@
 # 用途別ガイド一覧
 
-情報更新日：2026-09-15
+情報更新日：2026-09-28
 
 必要な機能と設置対象に合わせてお選びください。
 
@@ -10,20 +10,20 @@
 - [トラック・バスの側方と後方を確認したい](uses/truck.md)
 - [建設重機・作業現場の接触リスクを減らしたい](uses/construction.md)
 - [車両周囲を360度の俯瞰映像で確認したい](uses/surround.md)
-- [レーダーで障害物への接近を警報したい](uses/radar.md)
+- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](uses/radar.md)
 - [車両の前後映像・駐車中の状況を記録したい](uses/recording.md)
 - [録画を安全活動・KYT・環境改善・QC活動に活用する](uses/safety-review.md)
-- [車両搭載AIカメラで人身事故防止を支援する](uses/vehicle-person-safety.md)
+- [車両用AIカメラ・人物検知による事故防止支援｜株式会社INBYTE](uses/vehicle-person-safety.md)
 - [安全警告装置の鳴りすぎを抑える：AIカメラの警報範囲と車両信号](uses/alarm-optimization.md)
 
 ## 現場管理・AI外観検査
 
 - [装備未着用・転倒・危険エリア侵入を検知したい](uses/workplace.md)
-- [製造ラインの外観検査をAIで自動化したい](uses/inspection.md)
+- [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](uses/inspection.md)
 
 ## ボディカメラの業務活用
 
-- [業務用ボディカメラの用途一覧：安全・教育・点検・接客・警備](uses/body-camera.md)
+- [業務用ボディカメラの製品案内・購入相談｜株式会社INBYTE](uses/body-camera.md)
 - [現場映像を共有して遠隔支援したい](uses/remote-support.md)
 - [ボディカメラで安全パトロール・ヒヤリハット・KYTを記録する](uses/body-safety.md)
 - [ボディカメラで技能継承・OJT・作業マニュアル動画を作る](uses/body-training.md)
