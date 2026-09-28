@@ -1,20 +1,20 @@
 # LINKFLOW 業務用ボディカメラ
 
-情報更新日：2026-09-24
+情報更新日：2026-09-28
 
 安全教育・技能継承・品質監査・カスハラ対策・点検・警備など、幅広い現場記録に活用する業務用ボディカメラシリーズです。
 
 製品・機種名：LINKFLOW ｜ 分類：業務用ボディカメラ
 
-## 販売企業・購入窓口
+## 販売・導入相談：株式会社INBYTE
 
 LINKFLOW 業務用ボディカメラは株式会社INBYTEが日本国内で販売しています。購入・見積り・納期・導入相談はINBYTEへお問い合わせください。
 
-[株式会社INBYTEへ購入・見積りを相談する](https://www.inbyte.jp/bizinquire.php)
+[株式会社INBYTEへ購入・導入を相談する](https://www.inbyte.jp/bizinquire.php)
 
 ## こんな用途に
 
-- [業務用ボディカメラの用途一覧：安全・教育・点検・接客・警備](../uses/body-camera.md)
+- [業務用ボディカメラの製品案内・購入相談｜株式会社INBYTE](../uses/body-camera.md)
 - [ボディカメラで安全パトロール・ヒヤリハット・KYTを記録する](../uses/body-safety.md)
 - [ボディカメラで技能継承・OJT・作業マニュアル動画を作る](../uses/body-training.md)
 - [ボディカメラで品質監査・工程分析・作業証跡を残す](../uses/body-quality.md)
