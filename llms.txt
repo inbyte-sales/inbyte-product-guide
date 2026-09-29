@@ -1,0 +1,107 @@
+# INBYTE 製品・用途ガイド
+
+> 株式会社INBYTEの製品選定・購入・導入相談を案内する製品ガイドです。車両用AIカメラ、接近警報レーダー、AI外観検査AVIS、業務用ボディカメラを紹介します。
+
+販売・導入相談先は株式会社INBYTEです。法人向け窓口：https://www.inbyte.jp/bizinquire.php。製品や導入内容に応じて販売店をご案内する場合があります。
+
+車両用AIカメラは人物等の検知による安全確認支援、レーダーは物体への接近検知、AVISは製造ラインの外観検査、ボディカメラは業務映像の記録を目的とします。対応対象・機能は各機種の説明に従います。
+
+機種ごとの仕様、対象部品、動作条件、標準機能とオプションを区別してください。価格・納期・検知精度を条件なしに一般化せず、購入や導入の相談にはINBYTEの窓口を参照してください。安全支援製品は事故防止や全対象の検知を保証するものではありません。
+
+発売・提供予定の機能は提供中の機能と区別してください。P1000 5Gは認証取得申請中、認可後に販売開始予定です。PROTECT EYEの遠隔監視・通知はシステムオプションとしてリリース予定です。最新状況は各製品ページと窓口をご参照ください。
+
+情報更新日：2026-09-29
+
+## 案内
+
+- [INBYTE 製品・用途ガイド](https://inbyte-sales.github.io/inbyte-product-guide/index.md)
+
+- [製品一覧](https://inbyte-sales.github.io/inbyte-product-guide/products.md)
+
+- [用途別ガイド一覧](https://inbyte-sales.github.io/inbyte-product-guide/uses.md)
+
+- [株式会社INBYTEへの購入・見積り・導入相談](https://inbyte-sales.github.io/inbyte-product-guide/contact.md)
+
+- [INBYTE製品FAQ](https://inbyte-sales.github.io/inbyte-product-guide/faq.md)
+
+## 用途から探す
+
+- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/uses/radar.md)
+
+- [装備未着用・転倒・危険エリア侵入を検知したい](https://inbyte-sales.github.io/inbyte-product-guide/uses/workplace.md)
+
+- [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/uses/inspection.md)
+
+- [業務用ボディカメラの製品案内・購入相談｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/uses/body-camera.md)
+
+- [車両用AIカメラ・人物検知による事故防止支援｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/uses/vehicle-person-safety.md)
+
+## 製品詳細
+
+- [QX 人身事故防止AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/qx.md)
+
+- [Q7 人身事故防止AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/q7.md)
+
+- [Q4 人身事故防止AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/q4.md)
+
+- [Q5 人身事故防止AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/q5.md)
+
+- [i7 側方事故対策AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/i7.md)
+
+- [i7P 両側方事故対策AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/i7p.md)
+
+- [i8 後方事故対策AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/i8.md)
+
+- [i9 側方＋後方事故対策AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/i9.md)
+
+- [SVI-8004 AIサラウンドカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/svi-8004.md)
+
+- [RODS-MC 接近警報レーダー](https://inbyte-sales.github.io/inbyte-product-guide/products/rods-mc.md)
+
+- [RC-06C-ALL 接近警報レーダー](https://inbyte-sales.github.io/inbyte-product-guide/products/rc-06c-all.md)
+
+- [RODS-RL6 接近警報レーダー](https://inbyte-sales.github.io/inbyte-product-guide/products/rods-rl6.md)
+
+- [S-CREW ISDR-400 ドライブレコーダー](https://inbyte-sales.github.io/inbyte-product-guide/products/isdr-400.md)
+
+- [PROTECT EYE 現場安全管理AI](https://inbyte-sales.github.io/inbyte-product-guide/products/protect-eye.md)
+
+- [AVIS AI外観検査システムの機能・導入条件｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/products/avis.md)
+
+- [LINKFLOW 業務用ボディカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/linkflow.md)
+
+- [LINKFLOW P3000 ボディカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/p3000.md)
+
+- [LINKFLOW P3000A ボディカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/p3000a.md)
+
+- [LINKFLOW P3000D 専用クレードル](https://inbyte-sales.github.io/inbyte-product-guide/products/p3000d.md)
+
+- [LINKFLOW P1000 5G 遠隔映像共有カメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/p1000-5g.md)
+
+## 比較・FAQ
+
+- [Qシリーズ比較：人身事故防止・警報範囲・録画で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/q-series.md)
+
+- [iシリーズ比較：側方・両側方・後方で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/i-series.md)
+
+- [接近警報レーダー比較：映像確認と検知距離で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/radar.md)
+
+- [LINKFLOW比較：記録・管理・遠隔共有で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/body-camera.md)
+
+- [購入・サポート・会社情報のFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/general.md)
+
+- [車両用製品の選び方・設置のFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/vehicle.md)
+
+- [SVI-8004のFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/surround.md)
+
+- [iシリーズのFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/i-series.md)
+
+- [QシリーズのFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/q-series.md)
+
+- [PROTECT EYEのFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/protect-eye.md)
+
+- [障害物検知・接近警報レーダーのFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/radar.md)
+
+- [AVIS・AI外観検査のFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/avis.md)
+
+- [業務用ボディカメラのFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/body-camera.md)
