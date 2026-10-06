@@ -180,6 +180,10 @@ def build(out,base,production):
  llms_text='\n\n'.join(llms)+'\n'
  (out/'llms.txt').write_text(llms_text,encoding='utf-8')
  (ROOT/'llms.txt').write_text(llms_text,encoding='utf-8')
+ indexnow_key=config.get('indexnow_key')
+ if indexnow_key:
+  assert re.fullmatch(r'[A-Za-z0-9-]{8,128}',indexnow_key),'Invalid IndexNow key'
+  (out/(indexnow_key+'.txt')).write_text(indexnow_key,encoding='utf-8')
  (out/'404.html').write_text('<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="robots" content="noindex"><title>ページが見つかりません | INBYTE</title><h1>ページが見つかりません</h1><p>URLをご確認ください。</p>'+('<p><a href="'+escape(base)+'index.html">製品ガイドへ</a></p>' if base else '')+'</html>',encoding='utf-8')
  robots='User-agent: *\nAllow: /\n'
  if base:
