@@ -65,6 +65,6 @@
 - [用途一覧](uses.md)
 - [比較一覧](compare.md)
 - [INBYTEについて](about.md)
+- [販売パートナー募集](partners.md)
 - [この製品ガイドについて](sources.md)
 - [導入相談](contact.md)
-- ('よくある質問', 'faq.html')

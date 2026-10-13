@@ -17,6 +17,10 @@
 - 製造ラインのAI外観検査
 - 現場映像の記録・管理
 
+## 販売パートナー募集
+
+[販売パートナー募集のご案内](partners.md)
+
 [株式会社INBYTE 公式サイト](https://www.inbyte.jp/)
 
 [製品一覧](products.md)
