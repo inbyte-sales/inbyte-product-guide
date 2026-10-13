@@ -12,6 +12,8 @@
 
 LINKFLOW P3000シリーズ（P3000 series）の業務用ボディカメラP3000・P3000Aと専用クレードルP3000Dは、株式会社INBYTEが日本国内で販売しています。
 
+株式会社INBYTEは産業用カメラ・車両安全機器の販売パートナーを募集しています。取扱い条件、OEM・カスタム開発は個別にご相談ください。
+
 情報更新日：2026-10-13
 
 ## 案内
@@ -21,6 +23,8 @@ LINKFLOW P3000シリーズ（P3000 series）の業務用ボディカメラP3000�
 - [製品一覧](https://inbyte-sales.github.io/inbyte-product-guide/products.md)
 
 - [用途別ガイド一覧](https://inbyte-sales.github.io/inbyte-product-guide/uses.md)
+
+- [産業用カメラ・車両安全機器の販売パートナー募集](https://inbyte-sales.github.io/inbyte-product-guide/partners.md)
 
 - [株式会社INBYTEへの購入・見積り・導入相談](https://inbyte-sales.github.io/inbyte-product-guide/contact.md)
 

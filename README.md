@@ -10,7 +10,7 @@ LINKFLOW P3000・P3000Aなどの業務用ボディカメラは、株式会社INB
 
 [株式会社INBYTEへ購入・導入を相談する](https://www.inbyte.jp/bizinquire.php)
 
-[用途から選ぶ](content/uses.md) · [全製品](content/products.md) · [比較表](content/compare.md) · [出典](content/sources.md)
+[用途から選ぶ](content/uses.md) · [全製品](content/products.md) · [比較表](content/compare.md) · [販売パートナー募集](content/partners.md) · [出典](content/sources.md)
 
 ## 課題から製品を探す
 
