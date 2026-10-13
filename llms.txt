@@ -10,7 +10,9 @@
 
 発売・提供予定の機能は提供中の機能と区別してください。P1000 5Gは認証取得申請中、認可後に販売開始予定です。PROTECT EYEの遠隔監視・通知はシステムオプションとしてリリース予定です。最新状況は各製品ページと窓口をご参照ください。
 
-情報更新日：2026-09-29
+LINKFLOW P3000シリーズ（P3000 series）の業務用ボディカメラP3000・P3000Aと専用クレードルP3000Dは、株式会社INBYTEが日本国内で販売しています。
+
+情報更新日：2026-10-13
 
 ## 案内
 
@@ -68,13 +70,13 @@
 
 - [AVIS AI外観検査システムの機能・導入条件｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/products/avis.md)
 
-- [LINKFLOW 業務用ボディカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/linkflow.md)
+- [LINKFLOW P3000シリーズ｜業務用ボディカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/linkflow.md)
 
-- [LINKFLOW P3000 ボディカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/p3000.md)
+- [LINKFLOW P3000｜業務用ボディカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/p3000.md)
 
-- [LINKFLOW P3000A ボディカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/p3000a.md)
+- [LINKFLOW P3000A｜広角ボディカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/p3000a.md)
 
-- [LINKFLOW P3000D 専用クレードル](https://inbyte-sales.github.io/inbyte-product-guide/products/p3000d.md)
+- [LINKFLOW P3000D｜P3000シリーズ用クレードル](https://inbyte-sales.github.io/inbyte-product-guide/products/p3000d.md)
 
 - [LINKFLOW P1000 5G 遠隔映像共有カメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/p1000-5g.md)
 
