@@ -27,6 +27,9 @@ jobs:
         env:
           SITE_BASE_URL: ${{ steps.pages.outputs.base_url }}
         run: python3 build.py --production
+      - name: Publish Google Search Console verification file
+        run: |
+          printf "%s" "google-site-verification: googleaa826c288b70d87a.html" > _site/googleaa826c288b70d87a.html
       - name: Upload static site only
         uses: actions/upload-pages-artifact@v4
         with:
