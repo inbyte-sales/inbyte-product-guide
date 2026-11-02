@@ -153,11 +153,8 @@ def build(out,base,production):
    web={'@type':page['kind'],'@id':canonical+'#webpage','url':canonical,'name':page['title'],'description':page['description'],'inLanguage':'ja','dateModified':page['modified'],'publisher':{'@id':org['@id']}}
    if page.get('faqs'):web['mainEntity']=[{'@type':'Question','name':f['question'],'acceptedAnswer':{'@type':'Answer','text':f['answer']}} for f in page['faqs']]
    if page['product']:
-    prod=page['product'];pid=canonical+'#product'
-    graph.append({'@type':'Product','@id':pid,'name':prod['name'],'model':prod['model'],'description':(prod.get('sales_description','')+' '+prod['summary']).strip(),'category':prod['category'],'url':canonical})
-    if prod.get('sales_description') and '発売予定' not in prod['status']:
-     graph[0]['offers']={'@type':'Offer','url':sales['contact_url'],'seller':{'@id':org['@id']},'description':prod['sales_description']}
-    web['mainEntity']={'@id':pid}
+    prod=page['product']
+    web['about']={'@type':'Thing','name':prod['name'],'alternateName':prod['model'],'description':prod['summary']}
    graph += [org,web,{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':t,'item':urljoin(base,href)} for i,(t,href) in enumerate(crumb)]}]
   schema='<script type="application/ld+json">'+json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False).replace('<','\\u003c')+'</script>' if graph else ''
   title=page['title']+(' | INBYTE' if path!='index.html' else '')
