@@ -50,7 +50,7 @@ for use in U.values():
 
  if use['comparison']:blocks += [p(a('製品比較表を見る','compare/'+use['comparison']+'.html'))]
  blocks += [h('導入相談で確認すること'),ul(use['questions']),p(a('製品の選び方と導入相談','contact.html'))]
- add('uses/'+use['slug']+'.html',use['title'],use['summary'],blocks,modified=max(P[slug].get('updated',config['updated']) for slug in use['products']))
+ add('uses/'+use['slug']+'.html',use['title'],use['summary'],blocks,modified=max([use.get('updated',config['updated'])]+[P[slug].get('updated',config['updated']) for slug in use['products']]))
 for comp in data['comparisons']:
  add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*(sales_blocks(comp['sales_description']) if comp.get('sales_description') else sales_blocks(sales['body_camera_description']) if comp['slug']=='body-camera' else []),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])])
 
