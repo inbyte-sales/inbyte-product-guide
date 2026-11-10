@@ -160,6 +160,7 @@ def build(out,base,production):
   title=page['title']+(' | INBYTE' if path!='index.html' else '')
   meta=f'<meta name="description" content="{escape(page["description"],quote=True)}"><meta name="robots" content="index,follow,max-image-preview:large">'
   meta+=f'<link rel="alternate" type="text/markdown" href="{relative(path.removesuffix(".html")+".md",path)}"><link rel="describedby" href="{relative("llms.txt",path)}">'
+  if path=='index.html':meta+='<meta name="msvalidate.01" content="7FB0B56E8C5F80ECDBC38B41959C794C">'
   if canonical:meta+=f'<link rel="canonical" href="{escape(canonical,quote=True)}"><meta property="og:url" content="{escape(canonical,quote=True)}">'
   meta+=f'<meta property="og:title" content="{escape(title,quote=True)}"><meta property="og:description" content="{escape(page["description"],quote=True)}"><meta property="og:type" content="website"><meta property="og:locale" content="ja_JP">'
   nav=''.join('<a href="'+relative(href,path)+'">'+t+'</a>' for t,href in [('用途から選ぶ','uses.html'),('製品一覧','products.html'),('製品比較','compare.html'),('導入相談','contact.html'),('よくある質問','faq.html')])
