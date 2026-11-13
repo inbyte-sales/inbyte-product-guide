@@ -1,6 +1,6 @@
 # INBYTE 製品・用途ガイド
 
-車両の人身事故防止、現場安全管理、AI外観検査、ボディカメラによる業務記録を、用途と仕様から探せる製品ガイドです。
+株式会社INBYTEのWeb掲載情報と製品カタログに基づき、製品仕様・用途・関連資料を整理した製品情報集です。営業担当者、販売店、導入を検討される皆様が、製品情報の確認・比較・提案資料の作成に利用できる共通の情報源として公開しています。製品情報の変更に応じて更新します。
 
 ## 販売企業・購入窓口
 
@@ -19,9 +19,16 @@ LINKFLOW P3000・P3000Aなどの業務用ボディカメラは、株式会社INB
 - [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](content/uses/radar.md)
 - [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](content/uses/inspection.md)
 
-## よくある質問
+## よくある質問・Q&A
 
-[INBYTE製品FAQ](content/faq.md)
+[分野別・用途別に質問を探す](content/faq.md)
+
+- [ボディカメラの録画を安全教育・ヒヤリハット・KYTに使えますか？](content/faq/body-camera.md#faq-body-kyt)
+- [熟練者の技能継承・OJT・作業マニュアル動画にボディカメラを使えますか？](content/faq/body-camera.md#faq-body-ojt)
+- [フォークリフト・建設機械の警報が鳴りすぎる場合、Qシリーズで調整できますか？](content/faq/q-series.md#faq-q-alarm)
+- [QX・Q7の録画映像を安全活動・KYT・環境改善・QC活動に使えますか？](content/faq/q-series.md#faq-q-kyt)
+- [PROTECT EYEの画質・画角・暗所性能は何で決まりますか？](content/faq/protect-eye.md#faq-protect-camera)
+- [AVIS：目視検査の自動化を相談するとき、何を用意すればよいですか？](content/faq/avis.md#faq-add-10)
 
 ## 製品・機種一覧
 
@@ -48,4 +55,4 @@ LINKFLOW P3000・P3000Aなどの業務用ボディカメラは、株式会社INB
 
 ## 公開と更新
 
-[公開手順](PUBLISHING.md)に従ってGitHub Pagesを設定すると、HTML・正規URL・XMLサイトマップを公開URLに合わせて生成できます。編集元は `data/catalog.json`、生成コマンドは `python build.py` です。
+[公開手順](PUBLISHING.md)に従ってGitHub Pagesを設定すると、HTML・正規URL・XMLサイトマップを公開URLに合わせて生成できます。編集元は `data/catalog.json` と `faq-content.json`、生成コマンドは `python build.py` です。FAQの回答・関連リンク・製品と用途の対応は同じデータからHTMLとMarkdownへ反映します。
