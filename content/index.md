@@ -1,6 +1,6 @@
 # INBYTE 製品・用途ガイド
 
-情報更新日：2026-09-29
+情報更新日：2026-11-13
 
 車両の人身事故防止、作業現場の安全管理、製造ラインの検査、安全教育・点検・接客などの業務記録。解決したい課題から、INBYTEの製品と必要な構成を確認できます。
 
@@ -54,6 +54,15 @@
 - [iシリーズ比較：側方・両側方・後方で選ぶ](compare/i-series.md)
 - [接近警報レーダー比較：映像確認と検知距離で選ぶ](compare/radar.md)
 - [LINKFLOW比較：記録・管理・遠隔共有で選ぶ](compare/body-camera.md)
+
+## 製品選定でよくある質問
+
+- [ボディカメラの録画を安全教育・ヒヤリハット・KYTに使えますか？](faq/body-camera.md#faq-body-kyt)
+- [熟練者の技能継承・OJT・作業マニュアル動画にボディカメラを使えますか？](faq/body-camera.md#faq-body-ojt)
+- [フォークリフト・建設機械の警報が鳴りすぎる場合、Qシリーズで調整できますか？](faq/q-series.md#faq-q-alarm)
+- [QX・Q7の録画映像を安全活動・KYT・環境改善・QC活動に使えますか？](faq/q-series.md#faq-q-kyt)
+- [PROTECT EYEの画質・画角・暗所性能は何で決まりますか？](faq/protect-eye.md#faq-protect-camera)
+- [AVIS：目視検査の自動化を相談するとき、何を用意すればよいですか？](faq/avis.md#faq-add-10)
 
 ## すべての製品・機種
 

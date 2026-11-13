@@ -10,6 +10,14 @@ ROOT=Path(__file__).resolve().parent
 def read_json(name):return json.loads((ROOT/name).read_text(encoding='utf-8'))
 data=read_json('data/catalog.json');config=read_json('site-config.json')
 P={p['slug']:p for p in data['products']};U={u['slug']:u for u in data['uses']}
+faq_content=read_json('faq-content.json')
+data['faqs']+=faq_content['faqs']
+F={f['id']:f for f in data['faqs']}
+assert len(F)==len(data['faqs']),'duplicate FAQ ids'
+for section,items in [('products',P),('uses',U)]:
+ assert set(faq_content[section])==set(items),('FAQ coverage',section)
+ for ids in faq_content[section].values():
+  assert ids and len(ids)==len(set(ids)) and all(fid in F for fid in ids),'Invalid FAQ mapping'
 pages=[]
 sales=data['sales']
 partners=data['partners']
@@ -20,6 +28,26 @@ def table(headers,rows):return ('table',headers,rows)
 def a(text,href):return {'text':text,'href':href}
 def plink(slug):return a(P[slug]['name'],'products/'+slug+'.html')
 def ulink(slug):return a(U[slug]['title'],'uses/'+slug+'.html')
+
+def faq_link(fid):
+ f=F[fid]
+ return a(f['question'],'faq/'+f['category']+'.html#'+fid)
+
+def faq_blocks(section,slug):
+ blocks=[h('よくある質問・Q&A')]
+ for fid in faq_content[section][slug]:
+  f=F[fid]
+  blocks += [('h3',f['question']),p(f['answer']),p(faq_link(fid))]
+ return blocks
+
+def faq_detail_links(entry):
+ paths=list(entry.get('links',[]))
+ for section in ('products','uses'):
+  paths += [section+'/'+slug+'.html' for slug,ids in faq_content[section].items() if entry['id'] in ids]
+ labels={'products/'+s+'.html':v['name'] for s,v in P.items()}
+ labels.update({'uses/'+s+'.html':v['title'] for s,v in U.items()})
+ labels.update({'compare/'+c['slug']+'.html':c['title'] for c in data['comparisons']})
+ return [a(labels[path],path) for path in dict.fromkeys(paths)]
 def add(path,title,description,blocks,kind='WebPage',product=None,modified=None):
  pages.append(dict(path=path,title=title,description=description,blocks=blocks,kind=kind,product=product,modified=max(config['updated'],modified or config['updated'])))
 def source_blocks(product):
@@ -39,8 +67,8 @@ for product in P.values():
  if '発売予定' in product['status']:blocks += [p(product['status'])]
  if product.get('sales_description'):blocks += sales_blocks(product['sales_description'])
  blocks += [h('こんな用途に'),ul([ulink(s) for s in product['uses']]),h('主な機能・構成'),ul(product['features']),h('仕様・対応条件'),table(['項目','内容'],product['specs']),h('導入・使用条件'),ul(product['conditions'])]
- blocks += source_blocks(product)+[h('関連する製品'),ul([plink(s) for s in product['related']])]
- add('products/'+product['slug']+'.html',product.get('page_title',product['name']),(product.get('sales_description','')+' '+product['summary']).strip(),blocks,product=product,modified=product.get('updated'))
+ blocks += faq_blocks('products',product['slug'])+source_blocks(product)+[h('関連する製品'),ul([plink(s) for s in product['related']])]
+ add('products/'+product['slug']+'.html',product.get('page_title',product['name']),(product.get('sales_description','')+' '+product['summary']).strip(),blocks,product=product,modified=max(product.get('updated',config['updated']),faq_content['updated']))
 for use in U.values():
  blocks=[p(use['summary'])]+[p(t) for t in use['body']]+[h('候補になる製品'),table(['製品','概要'],[[plink(s),P[s]['summary']] for s in use['products']])]
  if use.get('sales_description'):blocks[1:1]=sales_blocks(use['sales_description'])
@@ -49,8 +77,8 @@ for use in U.values():
  if use.get('related_uses'):blocks += [h('関連する用途'),ul([ulink(s) for s in use['related_uses']])]
 
  if use['comparison']:blocks += [p(a('製品比較表を見る','compare/'+use['comparison']+'.html'))]
- blocks += [h('導入相談で確認すること'),ul(use['questions']),p(a('製品の選び方と導入相談','contact.html'))]
- add('uses/'+use['slug']+'.html',use['title'],use['summary'],blocks,modified=max([use.get('updated',config['updated'])]+[P[slug].get('updated',config['updated']) for slug in use['products']]))
+ blocks += faq_blocks('uses',use['slug'])+[h('導入相談で確認すること'),ul(use['questions']),p(a('製品の選び方と導入相談','contact.html'))]
+ add('uses/'+use['slug']+'.html',use['title'],use['summary'],blocks,modified=max([faq_content['updated'],use.get('updated',config['updated'])]+[P[slug].get('updated',config['updated']) for slug in use['products']]))
 for comp in data['comparisons']:
  add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*(sales_blocks(comp['sales_description']) if comp.get('sales_description') else sales_blocks(sales['body_camera_description']) if comp['slug']=='body-camera' else []),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])])
 
@@ -60,9 +88,10 @@ add('index.html','INBYTE 製品・用途ガイド','車両の安全確認、現�
  h('課題から製品を探す'),ul([ulink(slug) for slug in ['body-camera','vehicle-person-safety','radar','inspection']]),
  *[block for group in dict.fromkeys(u['group'] for u in U.values()) for block in [h(group),ul([ulink(s) for s,u in U.items() if u['group']==group])]],
  h('製品を比較する'),ul([a(c['title'],'compare/'+c['slug']+'.html') for c in data['comparisons']]),
+ h('製品選定でよくある質問'),ul([faq_link(fid) for fid in ['faq-body-kyt','faq-body-ojt','faq-q-alarm','faq-q-kyt','faq-protect-camera','faq-add-10']]),
  h('すべての製品・機種'),table(['製品','分類'],[[plink(s),v['category']] for s,v in P.items()]),
  h('販売パートナーを募集しています'),p('株式会社INBYTEは、産業用カメラ・車両安全機器などの販売パートナーを募集しています。'),p(a('販売パートナー募集のご案内','partners.html')),
- h('資料・導入相談'),ul([a('この製品ガイドについて','sources.html'),a('INBYTEについて','about.html'),a('製品の選び方と導入相談','contact.html')])],kind='CollectionPage')
+ h('資料・導入相談'),ul([a('この製品ガイドについて','sources.html'),a('INBYTEについて','about.html'),a('製品の選び方と導入相談','contact.html')])],kind='CollectionPage',modified=faq_content['updated'])
 catalog_blocks=[p('製品カテゴリごとに、用途・機能・仕様・導入条件を確認できます。'),*sales_blocks()]
 for cat in dict.fromkeys(v['category'] for v in P.values()):
  catalog_blocks += [h(cat),ul([plink(s) for s,v in P.items() if v['category']==cat])]
@@ -77,11 +106,11 @@ add('partners.html',partners['title'],partners['description'],[
  h('協業とお取引について'),p(partners['terms']),
  h('販売パートナーに関するお問い合わせ'),p(partners['contact']),p('株式会社INBYTE'),p(a(partners['email'],'mailto:'+partners['email'])),p(a('INBYTE公式サイト','https://www.inbyte.jp/'))],modified=partners['updated'])
 add('sources.html','この製品ガイドについて','INBYTEのWeb掲載情報と製品カタログを、用途・機能・仕様から選べる形にまとめた製品ガイドです。',[
- p('この製品ガイドは、INBYTEのWeb掲載情報と製品カタログをまとめたものです。製品の用途・機能・仕様を一覧で確認し、業務に合った機種や構成を選べます。'),
+ p('本ガイドは、株式会社INBYTEのWeb掲載情報と製品カタログに基づき、製品仕様・用途・関連資料を整理した製品情報集です。営業担当者、販売店、導入を検討される皆様が、製品情報の確認・比較・提案資料の作成に利用できる共通の情報源として公開しています。製品情報の変更に応じて更新します。'),
  table(['資料','参照版・箇所','関連する公開情報'],[[s['name'],s['edition'],a('公式情報',s['url'])] for s in data['sources'].values() if not s.get('internal')]),
  p('各製品ページに仕様と対応条件を掲載しています。用途ページでは、業種や課題に応じた活用方法を紹介しています。'),
  p('PROTECT EYEの撮影性能は接続する市販PoEカメラの仕様に応じて決まります。接近警報レーダー3製品はNETIS登録番号KT-260008の対象です。'),
- h('製品の選定にあたって'),ul(['カメラ、本体、モニター、記録媒体などの仕様を部品別に確認してください。','性能や動作時間は、対象物・環境・設定・構成により変わります。','発売予定品は各製品ページに予定時期を掲載しています。納期はお問い合わせください。','価格・契約・保守・適合条件は公式の問い合わせ窓口で確認してください。']),p(a('導入相談','contact.html'))])
+ h('製品の選定にあたって'),ul(['カメラ、本体、モニター、記録媒体などの仕様を部品別に確認してください。','性能や動作時間は、対象物・環境・設定・構成により変わります。','発売予定品は各製品ページに予定時期を掲載しています。納期はお問い合わせください。','価格・契約・保守・適合条件は公式の問い合わせ窓口で確認してください。']),p(a('導入相談','contact.html'))],modified=faq_content['updated'])
 add('contact.html','株式会社INBYTEへの購入・見積り・導入相談',sales['description'],[
  *sales_blocks(),
  h('製品名が分からない場合の導入相談'),p('目視検査を自動化したい、車両周囲の障害物を検知したい、人物への接近を警報したいなど、解決したい課題からご相談いただけます。'),
@@ -93,11 +122,15 @@ faq_categories=data.get('faq_categories',{})
 for slug,label in faq_categories.items():
  entries=[f for f in data['faqs'] if f['category']==slug]
  blocks=[p(label+'の製品選定・導入・運用に関するよくある質問です。'),p(a('FAQ一覧','faq.html'))]
- for entry in entries:blocks += [h(entry['question']),p(entry['answer'])]
+ blocks += [h('質問一覧'),ul([faq_link(entry['id']) for entry in entries])]
+ for entry in entries:
+  blocks += [('faq-heading',entry['id'],entry['question']),p(entry['answer'])]
+  links=faq_detail_links(entry)
+  if links:blocks += [ul(links)]
  blocks += sales_blocks()+[p(a('製品一覧','products.html'))]
- add('faq/'+slug+'.html',label+'のFAQ｜株式会社INBYTE',label+'のよくある質問に株式会社INBYTEがお答えします。',blocks,kind='FAQPage')
+ add('faq/'+slug+'.html',label+'のFAQ｜株式会社INBYTE',label+'のよくある質問に株式会社INBYTEがお答えします。',blocks,kind='FAQPage',modified=faq_content['updated'])
  pages[-1]['faqs']=entries
-add('faq.html','INBYTE製品FAQ','購入先、機種選定、設置、運用について株式会社INBYTEがお答えします。',[p('製品の購入・導入・運用に関するよくある質問です。'),ul([a(label,'faq/'+slug+'.html') for slug,label in faq_categories.items()]),*sales_blocks()],kind='CollectionPage')
+add('faq.html','INBYTE製品FAQ・Q&A｜仕様・用途・選び方','ボディカメラのKYT・技能継承、車両AIカメラの警報調整、PoEカメラ、AI外観検査など、製品仕様と用途の疑問に回答します。',[p('営業担当者・販売店・導入検討者が、製品仕様・用途・選び方を確認できるQ&Aです。質問ごとに回答と関連する製品・用途ページを掲載しています。'),h('分野から質問を探す'),ul([a(label,'faq/'+slug+'.html') for slug,label in faq_categories.items()]),h('用途・課題から質問を探す'),ul([faq_link(f['id']) for f in faq_content['faqs']]),h('機種の選定・運用でよくある質問'),ul([faq_link(fid) for fid in ['faq-add-02','faq-052','faq-057','faq-add-07','faq-add-05','faq-add-06','faq-010','faq-add-10']]),*sales_blocks()],kind='CollectionPage',modified=faq_content['updated'])
 
 add('sitemap.html','サイト内ページ一覧','製品情報、用途別ガイド、比較表、資料案内の全ページへ直接アクセスできます。',[h('製品・機種'),ul([plink(s) for s in P]),h('用途'),ul([ulink(s) for s in U]),h('比較'),ul([a(c['title'],'compare/'+c['slug']+'.html') for c in data['comparisons']]),h('案内'),ul([a('トップ','index.html'),a('よくある質問','faq.html'),a('製品一覧','products.html'),a('用途一覧','uses.html'),a('比較一覧','compare.html'),a('INBYTEについて','about.html'),a('販売パートナー募集','partners.html'),a('この製品ガイドについて','sources.html'),a('導入相談','contact.html')])],kind='CollectionPage')
 
@@ -110,7 +143,8 @@ def html_inline(value,path):
 def md_inline(value,path):
  if isinstance(value,dict):
   href=value['href']
-  if not urlparse(href).scheme:href=href.removesuffix('.html')+'.md'
+  if not urlparse(href).scheme:
+   path_part,sep,fragment=href.partition('#');href=path_part.removesuffix('.html')+'.md'+(sep+fragment if sep else '')
   return '['+value['text']+']('+relative(href,path)+')'
  return str(value).replace('|','\\|')
 def render_blocks(blocks,path,markdown=False):
@@ -119,6 +153,8 @@ def render_blocks(blocks,path,markdown=False):
   kind=block[0]
   if kind=='p':res.append(inline(block[1],path) if markdown else '<p>'+inline(block[1],path)+'</p>')
   elif kind=='h2':res.append('## '+block[1] if markdown else '<h2>'+escape(block[1])+'</h2>')
+  elif kind=='h3':res.append('### '+block[1] if markdown else '<h3>'+escape(block[1])+'</h3>')
+  elif kind=='faq-heading':res.append('<a id="'+escape(block[1],quote=True)+'"></a>\n\n## '+block[2] if markdown else '<h2 id="'+escape(block[1],quote=True)+'">'+escape(block[2])+'</h2>')
   elif kind=='ul':res.append('\n'.join('- '+inline(v,path) for v in block[1]) if markdown else '<ul>'+''.join('<li>'+inline(v,path)+'</li>' for v in block[1])+'</ul>')
   elif kind=='table':
    if markdown:res.append('| '+' | '.join(block[1])+' |\n| '+' | '.join('---' for _ in block[1])+' |\n'+'\n'.join('| '+' | '.join(inline(v,path) for v in row)+' |' for row in block[2]))
@@ -206,13 +242,13 @@ def build(out,base,production):
  (out/'robots.txt').write_text(robots,encoding='utf-8')
  (ROOT/'build-info.json').write_text(json.dumps({'base_url':base,'production':production,'pages':len(pages),'updated':max(page['modified'] for page in pages)},ensure_ascii=False,indent=2),encoding='utf-8')
  # Root README remains readable as the GitHub repository landing page.
- intro='# INBYTE 製品・用途ガイド\n\n車両の人身事故防止、現場安全管理、AI外観検査、ボディカメラによる業務記録を、用途と仕様から探せる製品ガイドです。\n\n'
+ intro='# INBYTE 製品・用途ガイド\n\n株式会社INBYTEのWeb掲載情報と製品カタログに基づき、製品仕様・用途・関連資料を整理した製品情報集です。営業担当者、販売店、導入を検討される皆様が、製品情報の確認・比較・提案資料の作成に利用できる共通の情報源として公開しています。製品情報の変更に応じて更新します。\n\n'
  intro+='## 販売企業・購入窓口\n\n'+sales['description']+'\n\n'+sales['body_camera_description']+'\n\n[株式会社INBYTEへ購入・導入を相談する]('+sales['contact_url']+')\n\n'
  intro+='[用途から選ぶ](content/uses.md) · [全製品](content/products.md) · [比較表](content/compare.md) · [販売パートナー募集](content/partners.md) · [出典](content/sources.md)\n\n'
  intro+='## 課題から製品を探す\n\n'+'\n'.join('- ['+U[slug]['title']+'](content/uses/'+slug+'.md)' for slug in ['body-camera','vehicle-person-safety','radar','inspection'])+'\n\n'
- intro+='## よくある質問\n\n[INBYTE製品FAQ](content/faq.md)\n\n'
+ intro+='## よくある質問・Q&A\n\n[分野別・用途別に質問を探す](content/faq.md)\n\n'+'\n'.join('- ['+F[fid]['question']+'](content/faq/'+F[fid]['category']+'.md#'+fid+')' for fid in ['faq-body-kyt','faq-body-ojt','faq-q-alarm','faq-q-kyt','faq-protect-camera','faq-add-10'])+'\n\n'
  intro+='## 製品・機種一覧\n\n'+'\n'.join('- ['+v['name']+'](content/products/'+s+'.md)' for s,v in P.items())+'\n\n'
- intro+='## 公開と更新\n\n[公開手順](PUBLISHING.md)に従ってGitHub Pagesを設定すると、HTML・正規URL・XMLサイトマップを公開URLに合わせて生成できます。編集元は `data/catalog.json`、生成コマンドは `python build.py` です。\n'
+ intro+='## 公開と更新\n\n[公開手順](PUBLISHING.md)に従ってGitHub Pagesを設定すると、HTML・正規URL・XMLサイトマップを公開URLに合わせて生成できます。編集元は `data/catalog.json` と `faq-content.json`、生成コマンドは `python build.py` です。FAQの回答・関連リンク・製品と用途の対応は同じデータからHTMLとMarkdownへ反映します。\n'
  (ROOT/'README.md').write_text(intro,encoding='utf-8')
 
 class Audit(HTMLParser):
@@ -262,7 +298,10 @@ def validate(out,base,production):
  assert seen==set(parsed),'unreachable pages'
  for source in (ROOT/'content').rglob('*.md'):
   for link in re.findall(r'\]\(([^)]+)\)',source.read_text(encoding='utf-8')):
-   if not urlparse(link).scheme:assert (source.parent/link).exists(),(source,link)
+   if not urlparse(link).scheme:
+    path_part,sep,fragment=link.partition('#');target=source.parent/unquote(path_part)
+    assert target.exists(),(source,link)
+    if sep:assert 'id="'+fragment+'"' in target.read_text(encoding='utf-8'),(source,link,'missing markdown fragment')
  if production:
   doc=ET.parse(out/'sitemap.xml');urls={e.text for e in doc.iter() if e.tag.endswith('loc')}
   assert urls=={urljoin(base,p['path']) for p in pages},'sitemap mismatch'
