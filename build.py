@@ -45,9 +45,23 @@ def faq_detail_links(entry):
  for section in ('products','uses'):
   paths += [section+'/'+slug+'.html' for slug,ids in faq_content[section].items() if entry['id'] in ids]
  labels={'products/'+s+'.html':v['name'] for s,v in P.items()}
+ labels['contact.html']='製品の構成・費用を相談する'
  labels.update({'uses/'+s+'.html':v['title'] for s,v in U.items()})
  labels.update({'compare/'+c['slug']+'.html':c['title'] for c in data['comparisons']})
  return [a(labels[path],path) for path in dict.fromkeys(paths)]
+
+def selection_blocks(section,slug):
+ blocks=[]
+ labels={'contact.html':'製品の構成・費用を相談する'}
+ labels.update({'uses/'+s+'.html':v['title'] for s,v in U.items()})
+ labels.update({'compare/'+c['slug']+'.html':c['title'] for c in data['comparisons']})
+ for entry in faq_content.get(section,{}).get(slug,[]):
+  blocks += [h(entry['title'])]
+  if entry.get('text'):blocks += [p(entry['text'])]
+  if entry.get('headers'):blocks += [table(entry['headers'],entry['rows'])]
+  if entry.get('items'):blocks += [ul(entry['items'])]
+  if entry.get('links'):blocks += [ul([a(labels[path],path) for path in entry['links']])]
+ return blocks
 def add(path,title,description,blocks,kind='WebPage',product=None,modified=None):
  pages.append(dict(path=path,title=title,description=description,blocks=blocks,kind=kind,product=product,modified=max(config['updated'],modified or config['updated'])))
 def source_blocks(product):
@@ -71,6 +85,7 @@ for product in P.values():
  add('products/'+product['slug']+'.html',product.get('page_title',product['name']),(product.get('sales_description','')+' '+product['summary']).strip(),blocks,product=product,modified=max(product.get('updated',config['updated']),faq_content['updated']))
 for use in U.values():
  blocks=[p(use['summary'])]+[p(t) for t in use['body']]+[h('候補になる製品'),table(['製品','概要'],[[plink(s),P[s]['summary']] for s in use['products']])]
+ blocks += selection_blocks('use_sections',use['slug'])
  if use.get('sales_description'):blocks[1:1]=sales_blocks(use['sales_description'])
  elif any(P[slug]['category']=='業務用ボディカメラ' for slug in use['products']):blocks[1:1]=sales_blocks(sales['body_camera_description'])
  if use.get('examples'):blocks += [h('想定する利用シーン'),ul(use['examples'])]
@@ -80,7 +95,7 @@ for use in U.values():
  blocks += faq_blocks('uses',use['slug'])+[h('導入相談で確認すること'),ul(use['questions']),p(a('製品の選び方と導入相談','contact.html'))]
  add('uses/'+use['slug']+'.html',use['title'],use['summary'],blocks,modified=max([faq_content['updated'],use.get('updated',config['updated'])]+[P[slug].get('updated',config['updated']) for slug in use['products']]))
 for comp in data['comparisons']:
- add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*(sales_blocks(comp['sales_description']) if comp.get('sales_description') else sales_blocks(sales['body_camera_description']) if comp['slug']=='body-camera' else []),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])])
+ add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*(sales_blocks(comp['sales_description']) if comp.get('sales_description') else sales_blocks(sales['body_camera_description']) if comp['slug']=='body-camera' else []),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),*selection_blocks('comparison_sections',comp['slug']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])],modified=faq_content['updated'] if comp['slug'] in faq_content.get('comparison_sections',{}) else None)
 
 add('index.html','INBYTE 製品・用途ガイド','車両の安全確認、現場安全管理、AI外観検査、ボディカメラ。INBYTEの製品を用途・構成・仕様から選べます。',[
  p('車両の人身事故防止、作業現場の安全管理、製造ラインの検査、安全教育・点検・接客などの業務記録。解決したい課題から、INBYTEの製品と必要な構成を確認できます。'),
