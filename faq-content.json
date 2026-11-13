@@ -1,64 +1,556 @@
 {
   "updated": "2026-11-13",
   "faqs": [
-    {"id":"faq-body-kyt","category":"body-camera","question":"ボディカメラの録画を安全教育・ヒヤリハット・KYTに使えますか？","answer":"LINKFLOW P3000・P3000Aで作業者目線の映像を記録し、安全教育やKYT（危険予知訓練）に活用できます。通路の死角、人と車両の交錯、作業前の確認などを撮影し、担当者が必要な場面を選んで振り返ります。装着位置と作業姿勢に合わせて、確認したい範囲が映るかを事前に確認します。","links":["uses/body-safety.html","products/p3000.html","products/p3000a.html"]},
-    {"id":"faq-body-ojt","category":"body-camera","question":"熟練者の技能継承・OJT・作業マニュアル動画にボディカメラを使えますか？","answer":"P3000・P3000Aは、熟練者の段取り、工具の配置、確認動作を装着者の視点で記録できます。撮影後に担当者が必要な場面を選び、説明や注意事項を付けてOJTや作業マニュアルの教材にします。手元が隠れない装着位置と撮影範囲を、実際の作業姿勢で確認します。","links":["uses/body-training.html","compare/body-camera.html"]},
-    {"id":"faq-body-harassment","category":"body-camera","question":"店舗・駅・自治体窓口・訪問対応のカスハラ対策にボディカメラを使えますか？","answer":"P3000・P3000Aで対応の経緯を録画し、管理者による事実確認、相談、引継ぎの材料として活用できます。録画の目的、周知方法、閲覧者、保存期間を決めて運用します。P3000Aの顔モザイクを使う場合も、事実確認に必要な情報と共有範囲を確認します。録画機能だけでトラブルの防止を保証するものではありません。","links":["uses/body-harassment.html","products/p3000a.html"]},
-    {"id":"faq-body-maintenance","category":"body-camera","question":"設備点検・インフラ保守の巡視記録にはどのボディカメラを選べますか？","answer":"録画後に点検内容を確認する用途にはP3000・P3000Aが候補です。設備の外観、配線、作業手順などを記録し、前回記録や点検項目と照合します。計器の表示や細部が読めるかを試写し、暗所では照明と撮影距離も確認します。リアルタイムの遠隔映像共有は、録画中心の運用と分けて通信対応モデルを選定します。","links":["uses/body-maintenance.html","uses/remote-support.html"]},
-    {"id":"faq-body-quality","category":"body-camera","question":"品質監査・工程分析に使うボディカメラと、AI外観検査AVISはどう違いますか？","answer":"P3000・P3000Aは、作業手順や工程の映像を残し、人が確認・分析するための記録に使います。品質パトロールや工程分析では、映像とチェックリストを組み合わせて振り返ります。製品のキズ・欠け・異物などの良否をAIで自動判定する用途には、カメラ・照明・エッジPC・AIモデルを組み合わせるAVISを選定します。","links":["uses/body-quality.html","uses/inspection.html","products/avis.html"]},
-    {"id":"faq-body-service","category":"body-camera","question":"飲食店・小売・訪問サービスの業務改善に録画を使えますか？","answer":"P3000・P3000Aで配膳や補充の動線、接客手順、作業の滞留を記録し、担当者が映像を見て改善点を整理できます。配置や手順の変更前後を同じ場面で撮影して比較します。撮影目的、顧客やスタッフが映る範囲、映像の共有方法を決め、必要な細部が映るかを事前に確認します。","links":["uses/body-service.html"]},
-    {"id":"faq-body-security","category":"body-camera","question":"警備巡回・物流の受け渡し・送迎時の乗降を記録できますか？","answer":"P3000・P3000Aは、施設の施錠確認、資材の搬入、配達物の受け渡し、送迎時の乗降を装着者の視点で記録する用途に使えます。録画する区間と開始・終了の手順を業務に合わせます。夜間巡回では照明、装着位置、撮影距離を確認し、映像の保存先と必要な区間を取り出す方法を決めます。","links":["uses/body-security.html"]},
-    {"id":"faq-body-disaster","category":"body-camera","question":"防災・避難訓練の振り返りにボディカメラを使えますか？","answer":"P3000・P3000Aで誘導担当者の視点から通路の詰まりや見通しを記録し、訓練後に改善点を整理できます。学校、施設、イベント会場などの動線確認にも活用できます。現地映像をリアルタイムで共有する場合は、録画型の運用とは別に通信対応モデルと回線を選定します。","links":["uses/body-disaster.html"]},
-    {"id":"faq-body-hr","category":"body-camera","question":"相談対応・面談・ハラスメント防止研修の記録に使えますか？","answer":"対応手順を振り返るための記録としてP3000・P3000Aの利用を検討できます。撮影目的、関係者への説明、閲覧者、保存期間を組織内で定め、必要な場面を限定します。顔モザイクを使う場合も、音声・氏名・書類・背景に含まれる情報を共有前に確認します。","links":["uses/body-hr.html"]},
-    {"id":"faq-q-kyt","category":"q-series","question":"QX・Q7の録画映像を安全活動・KYT・環境改善・QC活動に使えますか？","answer":"録画に対応するQX・Q7の映像を、安全活動、KYT（危険予知訓練）、環境改善、QC活動の振り返りに活用できます。人の飛び出し、見通しの悪い交差部、車両と人の動線などを確認し、担当者が必要な場面を選んで改善策を話し合います。Q4・Q5には本体録画機能がありません。","links":["uses/safety-review.html","products/qx.html","products/q7.html"]},
-    {"id":"faq-q-alarm","category":"q-series","question":"フォークリフト・建設機械の警報が鳴りすぎる場合、Qシリーズで調整できますか？","answer":"Qシリーズは、取り付け位置、警報距離、対応する車両信号との連動を現場に合わせて設定します。QX・Q7の警報距離は約1.5m・3m・5m・7m、Q4・Q5は約3m・5m・7mです。通常作業と危険な接近の両方で確認し、不要な警報を抑えながら必要な注意喚起が届く設定に調整します。検知結果は明るさ、遮蔽物、取り付け状態などで変わります。","links":["uses/alarm-optimization.html","compare/q-series.html"]},
-    {"id":"faq-protect-camera","category":"protect-eye","question":"PROTECT EYEの画質・画角・暗所性能は何で決まりますか？","answer":"PROTECT EYEの撮影性能は、接続する市販PoEカメラの解像度、画角、暗所性能などの仕様に依存します。カメラの型番、映像方式、設定、設置位置を確認して構成を選定します。PoE対応だけで接続可否や検知性能を判断せず、実際の対象と環境で適合を確認します。","links":["products/protect-eye.html","uses/workplace.html"]},
-    {"id":"faq-drive-recording","category":"vehicle","question":"車両の前後映像・駐車中の記録と、人物検知AIカメラはどう選びますか？","answer":"前後の走行映像や駐車中の状況を記録する用途には、ISDR-400ドライブレコーダーが候補です。人物の接近を検知して注意喚起する用途には車両用AIカメラを選びます。QX・Q7は人物検知と録画に対応しますが、検知方向、録画条件、電源、必要な構成は機種ごとに確認します。","links":["uses/recording.html","products/isdr-400.html","uses/vehicle-person-safety.html"]}
+    {
+      "id": "faq-body-kyt",
+      "category": "body-camera",
+      "question": "ボディカメラの録画を安全教育・ヒヤリハット・KYTに使えますか？",
+      "answer": "LINKFLOW P3000・P3000Aで作業者目線の映像を記録し、安全教育やKYT（危険予知訓練）に活用できます。通路の死角、人と車両の交錯、作業前の確認などを撮影し、担当者が必要な場面を選んで振り返ります。装着位置と作業姿勢に合わせて、確認したい範囲が映るかを事前に確認します。",
+      "links": [
+        "uses/body-safety.html",
+        "products/p3000.html",
+        "products/p3000a.html"
+      ]
+    },
+    {
+      "id": "faq-body-ojt",
+      "category": "body-camera",
+      "question": "熟練者の技能継承・OJT・作業マニュアル動画にボディカメラを使えますか？",
+      "answer": "P3000・P3000Aは、熟練者の段取り、工具の配置、確認動作を装着者の視点で記録できます。撮影後に担当者が必要な場面を選び、説明や注意事項を付けてOJTや作業マニュアルの教材にします。手元が隠れない装着位置と撮影範囲を、実際の作業姿勢で確認します。",
+      "links": [
+        "uses/body-training.html",
+        "compare/body-camera.html"
+      ]
+    },
+    {
+      "id": "faq-body-harassment",
+      "category": "body-camera",
+      "question": "店舗・駅・自治体窓口・訪問対応のカスハラ対策にボディカメラを使えますか？",
+      "answer": "P3000・P3000Aで対応の経緯を録画し、管理者による事実確認、相談、引継ぎの材料として活用できます。録画の目的、周知方法、閲覧者、保存期間を決めて運用します。P3000Aの顔モザイクを使う場合も、事実確認に必要な情報と共有範囲を確認します。録画機能だけでトラブルの防止を保証するものではありません。",
+      "links": [
+        "uses/body-harassment.html",
+        "products/p3000a.html"
+      ]
+    },
+    {
+      "id": "faq-body-maintenance",
+      "category": "body-camera",
+      "question": "設備点検・インフラ保守の巡視記録にはどのボディカメラを選べますか？",
+      "answer": "録画後に点検内容を確認する用途にはP3000・P3000Aが候補です。設備の外観、配線、作業手順などを記録し、前回記録や点検項目と照合します。計器の表示や細部が読めるかを試写し、暗所では照明と撮影距離も確認します。リアルタイムの遠隔映像共有は、録画中心の運用と分けて通信対応モデルを選定します。",
+      "links": [
+        "uses/body-maintenance.html",
+        "uses/remote-support.html"
+      ]
+    },
+    {
+      "id": "faq-body-quality",
+      "category": "body-camera",
+      "question": "品質監査・工程分析に使うボディカメラと、AI外観検査AVISはどう違いますか？",
+      "answer": "P3000・P3000Aは、作業手順や工程の映像を残し、人が確認・分析するための記録に使います。品質パトロールや工程分析では、映像とチェックリストを組み合わせて振り返ります。製品のキズ・欠け・異物などの良否をAIで自動判定する用途には、カメラ・照明・エッジPC・AIモデルを組み合わせるAVISを選定します。",
+      "links": [
+        "uses/body-quality.html",
+        "uses/inspection.html",
+        "products/avis.html"
+      ]
+    },
+    {
+      "id": "faq-body-service",
+      "category": "body-camera",
+      "question": "飲食店・小売・訪問サービスの業務改善に録画を使えますか？",
+      "answer": "P3000・P3000Aで配膳や補充の動線、接客手順、作業の滞留を記録し、担当者が映像を見て改善点を整理できます。配置や手順の変更前後を同じ場面で撮影して比較します。撮影目的、顧客やスタッフが映る範囲、映像の共有方法を決め、必要な細部が映るかを事前に確認します。",
+      "links": [
+        "uses/body-service.html"
+      ]
+    },
+    {
+      "id": "faq-body-security",
+      "category": "body-camera",
+      "question": "警備巡回・物流の受け渡し・送迎時の乗降を記録できますか？",
+      "answer": "P3000・P3000Aは、施設の施錠確認、資材の搬入、配達物の受け渡し、送迎時の乗降を装着者の視点で記録する用途に使えます。録画する区間と開始・終了の手順を業務に合わせます。夜間巡回では照明、装着位置、撮影距離を確認し、映像の保存先と必要な区間を取り出す方法を決めます。",
+      "links": [
+        "uses/body-security.html"
+      ]
+    },
+    {
+      "id": "faq-body-disaster",
+      "category": "body-camera",
+      "question": "防災・避難訓練の振り返りにボディカメラを使えますか？",
+      "answer": "P3000・P3000Aで誘導担当者の視点から通路の詰まりや見通しを記録し、訓練後に改善点を整理できます。学校、施設、イベント会場などの動線確認にも活用できます。現地映像をリアルタイムで共有する場合は、録画型の運用とは別に通信対応モデルと回線を選定します。",
+      "links": [
+        "uses/body-disaster.html"
+      ]
+    },
+    {
+      "id": "faq-body-hr",
+      "category": "body-camera",
+      "question": "相談対応・面談・ハラスメント防止研修の記録に使えますか？",
+      "answer": "対応手順を振り返るための記録としてP3000・P3000Aの利用を検討できます。撮影目的、関係者への説明、閲覧者、保存期間を組織内で定め、必要な場面を限定します。顔モザイクを使う場合も、音声・氏名・書類・背景に含まれる情報を共有前に確認します。",
+      "links": [
+        "uses/body-hr.html"
+      ]
+    },
+    {
+      "id": "faq-q-kyt",
+      "category": "q-series",
+      "question": "QX・Q7の録画映像を安全活動・KYT・環境改善・QC活動に使えますか？",
+      "answer": "録画に対応するQX・Q7の映像を、安全活動、KYT（危険予知訓練）、環境改善、QC活動の振り返りに活用できます。人の飛び出し、見通しの悪い交差部、車両と人の動線などを確認し、担当者が必要な場面を選んで改善策を話し合います。Q4・Q5には本体録画機能がありません。",
+      "links": [
+        "uses/safety-review.html",
+        "products/qx.html",
+        "products/q7.html"
+      ]
+    },
+    {
+      "id": "faq-q-alarm",
+      "category": "q-series",
+      "question": "フォークリフト・建設機械の警報が鳴りすぎる場合、Qシリーズで調整できますか？",
+      "answer": "Qシリーズは、取り付け位置、警報距離、対応する車両信号との連動を現場に合わせて設定します。QX・Q7の警報距離は約1.5m・3m・5m・7m、Q4・Q5は約3m・5m・7mです。通常作業と危険な接近の両方で確認し、不要な警報を抑えながら必要な注意喚起が届く設定に調整します。検知結果は明るさ、遮蔽物、取り付け状態などで変わります。",
+      "links": [
+        "uses/alarm-optimization.html",
+        "compare/q-series.html"
+      ]
+    },
+    {
+      "id": "faq-protect-camera",
+      "category": "protect-eye",
+      "question": "PROTECT EYEの画質・画角・暗所性能は何で決まりますか？",
+      "answer": "PROTECT EYEの撮影性能は、接続する市販PoEカメラの解像度、画角、暗所性能などの仕様に依存します。カメラの型番、映像方式、設定、設置位置を確認して構成を選定します。PoE対応だけで接続可否や検知性能を判断せず、実際の対象と環境で適合を確認します。",
+      "links": [
+        "products/protect-eye.html",
+        "uses/workplace.html"
+      ]
+    },
+    {
+      "id": "faq-drive-recording",
+      "category": "vehicle",
+      "question": "車両の前後映像・駐車中の記録と、人物検知AIカメラはどう選びますか？",
+      "answer": "前後の走行映像や駐車中の状況を記録する用途には、ISDR-400ドライブレコーダーが候補です。人物の接近を検知して注意喚起する用途には車両用AIカメラを選びます。QX・Q7は人物検知と録画に対応しますが、検知方向、録画条件、電源、必要な構成は機種ごとに確認します。",
+      "links": [
+        "uses/recording.html",
+        "products/isdr-400.html",
+        "uses/vehicle-person-safety.html"
+      ]
+    },
+    {
+      "id": "faq-body-cost",
+      "category": "body-camera",
+      "question": "ボディカメラの価格・導入費用は、何を含めて比較すればよいですか？",
+      "answer": "導入費用は、本体の型番と台数、充電・転送機器、映像の保存先、必要な管理機能を分けて比較します。P3000・P3000Aは撮影する本体、P3000Dは最大4台の充電・データ転送に使う周辺機器です。既存PC・NAS・サーバーを使うか、追加機器が必要かも整理します。価格は必要な構成ごとに株式会社INBYTEが見積りをご案内します。通信対応モデルを検討する場合は、回線やサービスの利用条件も確認します。",
+      "links": [
+        "compare/body-camera.html",
+        "products/p3000d.html",
+        "contact.html"
+      ]
+    },
+    {
+      "id": "faq-body-local-storage",
+      "category": "body-camera",
+      "question": "ボディカメラはクラウド契約が必須ですか？社内PCやNASに保存できますか？",
+      "answer": "P3000・P3000Aは64GBの内蔵メモリに録画するモデルで、PC・NAS・サーバーへのデータ回収・保存を中心に構成できます。P3000Dは充電とデータ転送に使います。保存先、接続要件、必要な管理ソフトを構成ごとに確認します。端末録画とクラウドでの映像共有は役割が異なるため、追加サービスや管理機能の契約条件を分けて選定します。",
+      "links": [
+        "products/p3000.html",
+        "products/p3000a.html",
+        "products/p3000d.html"
+      ]
+    },
+    {
+      "id": "faq-body-retention",
+      "category": "body-camera",
+      "question": "ボディカメラの録画データは何日保存できますか？",
+      "answer": "保存日数は、録画する台数、1日あたりの録画時間、解像度などの設定、保存先の容量によって変わります。P3000・P3000Aの内蔵メモリは64GBですが、これだけで保存日数は決まりません。端末から回収する間隔と社内の保存期間を分けて決め、実際の設定で1勤務分のデータ量を確認して保存先を選びます。",
+      "links": [
+        "products/p3000.html",
+        "products/p3000a.html",
+        "uses/body-camera.html"
+      ]
+    },
+    {
+      "id": "faq-body-face-sharing",
+      "category": "body-camera",
+      "question": "P3000Aの顔モザイクを使えば、録画をそのまま社内共有できますか？",
+      "answer": "P3000Aは端末内でのリアルタイム顔モザイク処理に対応します。共有前には顔だけでなく、音声、氏名、名札、書類、背景に含まれる情報も確認します。カスハラ対応の事実確認と研修教材では必要な情報や閲覧者が異なるため、利用目的、共有範囲、保存期間を決めて運用します。",
+      "links": [
+        "products/p3000a.html",
+        "uses/body-harassment.html",
+        "uses/body-hr.html"
+      ]
+    },
+    {
+      "id": "faq-body-wearing",
+      "category": "body-camera",
+      "question": "窓口・店舗・訪問対応では、ボディカメラの装着位置をどう決めますか？",
+      "answer": "応対する相手と周辺の状況が映り、制服や作業動作の妨げにならない位置を選びます。立位・着席・移動中の実際の姿勢で試写し、相手や机で画面が隠れないか、映し込みを抑えたい書類や画面が入らないかを確認します。P3000は画角148.2°、P3000Aは210°のため、装着位置と必要な撮影範囲を合わせて比較します。",
+      "links": [
+        "uses/body-harassment.html",
+        "compare/body-camera.html"
+      ]
+    },
+    {
+      "id": "faq-body-shift",
+      "category": "body-camera",
+      "question": "8時間勤務の記録にP3000Aを使えますか？",
+      "answer": "P3000Aの連続録画は最大約8時間、充電時間は約3時間です。録画設定や使用環境により変わるため、最大値だけで1勤務分を撮影できると判断せず、実際の設定と業務の流れで確認します。必要な録画区間、勤務前の充電、勤務後のデータ回収を決め、撮影時間と保存容量の両方から台数・運用を選定します。",
+      "links": [
+        "products/p3000a.html",
+        "products/p3000d.html"
+      ]
+    },
+    {
+      "id": "faq-body-rollout",
+      "category": "body-camera",
+      "question": "店舗や窓口へボディカメラを導入する前に、何を試せばよいですか？",
+      "answer": "まず対象業務と撮影目的を決め、実際の制服・装着位置・応対姿勢で映像を確認します。録画の開始・終了、必要な場面の取り出し、管理者への引継ぎ、保存先への回収、充電までを一連の業務として確認します。試験の機材や進め方、費用は、対象機種と台数を添えて株式会社INBYTEへご相談ください。",
+      "links": [
+        "uses/body-harassment.html",
+        "uses/body-service.html",
+        "contact.html"
+      ]
+    },
+    {
+      "id": "faq-body-handover",
+      "category": "body-camera",
+      "question": "カスハラ対応の録画を管理者へ引き継ぐには、何を決めますか？",
+      "answer": "録画の開始・終了を担当者間で統一し、発生日時・担当者・対象業務と対応する映像を管理者が確認できるようにします。必要な映像の取り出しと保存先、閲覧できる人、保存期間、管理者への連絡方法を定めます。録画後に振り返るP3000・P3000Aの運用と、その場で本部へ映像を共有する通信対応モデルの運用を分けて選定します。",
+      "links": [
+        "uses/body-harassment.html",
+        "uses/remote-support.html"
+      ]
+    }
   ],
   "products": {
-    "qx":["faq-052","faq-057","faq-q-alarm","faq-q-kyt"],
-    "q7":["faq-052","faq-057","faq-q-alarm","faq-q-kyt","faq-sd-maintenance"],
-    "q4":["faq-052","faq-058","faq-q-alarm"],
-    "q5":["faq-052","faq-059","faq-q-alarm"],
-    "i7":["faq-039","faq-040","faq-048"],
-    "i7p":["faq-040","faq-044","faq-048"],
-    "i8":["faq-042","faq-043","faq-048"],
-    "i9":["faq-043","faq-046","faq-048"],
-    "svi-8004":["faq-030","faq-031","faq-032"],
-    "rods-mc":["faq-079","faq-080","faq-add-08","faq-010"],
-    "rc-06c-all":["faq-082","faq-add-08","faq-010"],
-    "rods-rl6":["faq-083","faq-084","faq-085","faq-010"],
-    "isdr-400":["faq-drive-recording","faq-006"],
-    "protect-eye":["faq-069","faq-protect-camera","faq-add-13","faq-add-14"],
-    "avis":["faq-093","faq-094","faq-096","faq-add-10","faq-add-11"],
-    "linkflow":["faq-body-kyt","faq-body-ojt","faq-add-02","faq-add-05","faq-add-06"],
-    "p3000":["faq-add-02","faq-body-kyt","faq-body-ojt","faq-add-04"],
-    "p3000a":["faq-add-02","faq-body-harassment","faq-body-kyt","faq-body-ojt"],
-    "p3000d":["faq-add-05","faq-add-04"],
-    "p1000-5g":["faq-add-06","faq-add-04"]
+    "qx": [
+      "faq-052",
+      "faq-057",
+      "faq-q-alarm",
+      "faq-q-kyt"
+    ],
+    "q7": [
+      "faq-052",
+      "faq-057",
+      "faq-q-alarm",
+      "faq-q-kyt",
+      "faq-sd-maintenance"
+    ],
+    "q4": [
+      "faq-052",
+      "faq-058",
+      "faq-q-alarm"
+    ],
+    "q5": [
+      "faq-052",
+      "faq-059",
+      "faq-q-alarm"
+    ],
+    "i7": [
+      "faq-039",
+      "faq-040",
+      "faq-048"
+    ],
+    "i7p": [
+      "faq-040",
+      "faq-044",
+      "faq-048"
+    ],
+    "i8": [
+      "faq-042",
+      "faq-043",
+      "faq-048"
+    ],
+    "i9": [
+      "faq-043",
+      "faq-046",
+      "faq-048"
+    ],
+    "svi-8004": [
+      "faq-030",
+      "faq-031",
+      "faq-032"
+    ],
+    "rods-mc": [
+      "faq-079",
+      "faq-080",
+      "faq-add-08",
+      "faq-010"
+    ],
+    "rc-06c-all": [
+      "faq-082",
+      "faq-add-08",
+      "faq-010"
+    ],
+    "rods-rl6": [
+      "faq-083",
+      "faq-084",
+      "faq-085",
+      "faq-010"
+    ],
+    "isdr-400": [
+      "faq-drive-recording",
+      "faq-006"
+    ],
+    "protect-eye": [
+      "faq-069",
+      "faq-protect-camera",
+      "faq-add-13",
+      "faq-add-14"
+    ],
+    "avis": [
+      "faq-093",
+      "faq-094",
+      "faq-096",
+      "faq-add-10",
+      "faq-add-11"
+    ],
+    "linkflow": [
+      "faq-body-kyt",
+      "faq-body-ojt",
+      "faq-add-02",
+      "faq-add-05",
+      "faq-add-06",
+      "faq-body-cost",
+      "faq-body-local-storage",
+      "faq-body-rollout"
+    ],
+    "p3000": [
+      "faq-add-02",
+      "faq-body-kyt",
+      "faq-body-ojt",
+      "faq-add-04",
+      "faq-body-cost",
+      "faq-body-local-storage",
+      "faq-body-retention"
+    ],
+    "p3000a": [
+      "faq-add-02",
+      "faq-body-harassment",
+      "faq-body-kyt",
+      "faq-body-ojt",
+      "faq-body-cost",
+      "faq-body-face-sharing",
+      "faq-body-shift"
+    ],
+    "p3000d": [
+      "faq-add-05",
+      "faq-add-04",
+      "faq-body-cost",
+      "faq-body-local-storage"
+    ],
+    "p1000-5g": [
+      "faq-add-06",
+      "faq-add-04"
+    ]
   },
   "uses": {
-    "forklift":["faq-055","faq-q-alarm","faq-q-kyt"],
-    "truck":["faq-040","faq-043","faq-048"],
-    "construction":["faq-052","faq-q-alarm","faq-add-07"],
-    "surround":["faq-030","faq-031","faq-032"],
-    "radar":["faq-add-07","faq-add-08","faq-010"],
-    "workplace":["faq-069","faq-protect-camera","faq-add-14"],
-    "inspection":["faq-093","faq-094","faq-add-10","faq-add-11"],
-    "body-camera":["faq-body-kyt","faq-body-ojt","faq-add-02","faq-add-05","faq-add-06"],
-    "remote-support":["faq-add-06","faq-body-maintenance"],
-    "recording":["faq-drive-recording","faq-032"],
-    "body-safety":["faq-body-kyt","faq-add-02","faq-add-04"],
-    "body-training":["faq-body-ojt","faq-add-02","faq-add-05"],
-    "body-quality":["faq-body-quality","faq-add-04"],
-    "body-harassment":["faq-body-harassment","faq-add-02","faq-add-04"],
-    "body-maintenance":["faq-body-maintenance","faq-add-06"],
-    "body-service":["faq-body-service","faq-add-05"],
-    "body-security":["faq-body-security","faq-add-04"],
-    "body-disaster":["faq-body-disaster","faq-add-06"],
-    "body-hr":["faq-body-hr","faq-add-04"],
-    "safety-review":["faq-q-kyt","faq-body-kyt","faq-060"],
-    "vehicle-person-safety":["faq-053","faq-052","faq-add-07","faq-q-kyt"],
-    "alarm-optimization":["faq-q-alarm","faq-061","faq-068"]
+    "forklift": [
+      "faq-055",
+      "faq-q-alarm",
+      "faq-q-kyt"
+    ],
+    "truck": [
+      "faq-040",
+      "faq-043",
+      "faq-048"
+    ],
+    "construction": [
+      "faq-052",
+      "faq-q-alarm",
+      "faq-add-07"
+    ],
+    "surround": [
+      "faq-030",
+      "faq-031",
+      "faq-032"
+    ],
+    "radar": [
+      "faq-add-07",
+      "faq-add-08",
+      "faq-010"
+    ],
+    "workplace": [
+      "faq-069",
+      "faq-protect-camera",
+      "faq-add-14"
+    ],
+    "inspection": [
+      "faq-093",
+      "faq-094",
+      "faq-add-10",
+      "faq-add-11"
+    ],
+    "body-camera": [
+      "faq-body-kyt",
+      "faq-body-ojt",
+      "faq-add-02",
+      "faq-add-05",
+      "faq-add-06",
+      "faq-body-cost",
+      "faq-body-local-storage",
+      "faq-body-retention"
+    ],
+    "remote-support": [
+      "faq-add-06",
+      "faq-body-maintenance"
+    ],
+    "recording": [
+      "faq-drive-recording",
+      "faq-032"
+    ],
+    "body-safety": [
+      "faq-body-kyt",
+      "faq-add-02",
+      "faq-add-04"
+    ],
+    "body-training": [
+      "faq-body-ojt",
+      "faq-add-02",
+      "faq-add-05"
+    ],
+    "body-quality": [
+      "faq-body-quality",
+      "faq-add-04"
+    ],
+    "body-harassment": [
+      "faq-body-harassment",
+      "faq-add-02",
+      "faq-add-04",
+      "faq-body-cost",
+      "faq-body-wearing",
+      "faq-body-face-sharing",
+      "faq-body-handover",
+      "faq-body-rollout"
+    ],
+    "body-maintenance": [
+      "faq-body-maintenance",
+      "faq-add-06"
+    ],
+    "body-service": [
+      "faq-body-service",
+      "faq-add-05"
+    ],
+    "body-security": [
+      "faq-body-security",
+      "faq-add-04"
+    ],
+    "body-disaster": [
+      "faq-body-disaster",
+      "faq-add-06"
+    ],
+    "body-hr": [
+      "faq-body-hr",
+      "faq-add-04"
+    ],
+    "safety-review": [
+      "faq-q-kyt",
+      "faq-body-kyt",
+      "faq-060"
+    ],
+    "vehicle-person-safety": [
+      "faq-053",
+      "faq-052",
+      "faq-add-07",
+      "faq-q-kyt"
+    ],
+    "alarm-optimization": [
+      "faq-q-alarm",
+      "faq-061",
+      "faq-068"
+    ]
+  },
+  "use_sections": {
+    "body-harassment": [
+      {
+        "title": "カスハラ対応で必要な機能から選ぶ",
+        "headers": [
+          "必要な運用",
+          "候補になる機種・構成",
+          "選定時の確認点"
+        ],
+        "rows": [
+          [
+            "録画後の事実確認・管理者への引継ぎ",
+            "P3000／P3000A",
+            "相手と周辺が映る装着位置、必要な場面の取り出し方"
+          ],
+          [
+            "広い範囲の撮影と顔モザイク",
+            "P3000A",
+            "画角210°と端末内顔モザイク。共有時は顔以外の情報も確認"
+          ],
+          [
+            "複数担当者・複数台の充電と映像回収",
+            "P3000D＋対応カメラ＋保存先",
+            "最大4台の充電・転送。PC・NAS・サーバー等の接続要件"
+          ],
+          [
+            "その場で本部へライブ映像・音声共有",
+            "P1000 5G",
+            "発売予定・認証取得申請中。提供時期と現地の通信条件"
+          ]
+        ]
+      },
+      {
+        "title": "本体価格だけでなく、運用に必要な費用を整理する",
+        "text": "本体、周辺機器、映像の保存先、必要な管理機能を分けて見積りを確認します。既存設備を使える部分と追加が必要な部分を明確にすると、導入後の運用を含めて比較できます。",
+        "items": [
+          "本体：P3000・P3000Aの型番、利用人数、同時使用台数",
+          "周辺機器：必要な充電・転送機器と台数",
+          "保存・管理：PC・NAS・サーバーの容量、接続条件、必要な管理機能",
+          "運用：充電・回収・閲覧・保存期間の管理を担う担当者と手順",
+          "通信：ライブ共有が必要な場合に、対応モデル・回線・利用条件を別途確認"
+        ],
+        "links": [
+          "contact.html",
+          "compare/body-camera.html"
+        ]
+      },
+      {
+        "title": "運用例：録画して管理者が振り返る場合",
+        "text": "以下は導入を検討するための運用例です。特定の企業・施設の導入実績を示すものではありません。",
+        "items": [
+          "勤務前：充電と保存容量、装着位置を確認する",
+          "応対時：組織で決めた手順に従って録画し、管理者への連絡を行う",
+          "勤務後：担当者と日時を対応付けて映像を回収し、指定した保存先へ移す",
+          "振り返り：閲覧権限のある管理者が必要な場面を確認し、応対手順や研修へ活用する"
+        ]
+      }
+    ]
+  },
+  "comparison_sections": {
+    "body-camera": [
+      {
+        "title": "費用と運用条件の比較で確認すること",
+        "text": "カメラ本体と周辺機器、保存・管理の構成を分けて比較します。価格は必要台数と構成を確認して見積りをご案内します。",
+        "headers": [
+          "比較する項目",
+          "P3000／P3000Aの録画運用",
+          "ライブ共有を検討する場合"
+        ],
+        "rows": [
+          [
+            "主な役割",
+            "端末に録画し、撮影後に回収・確認",
+            "通信対応モデルと回線を組み合わせ、離れた場所と映像・音声を共有"
+          ],
+          [
+            "本体・周辺機器",
+            "本体台数、充電・転送機器、映像の保存先を選定",
+            "P1000 5Gの提供状況と必要構成を確認"
+          ],
+          [
+            "保存・管理",
+            "既存PC・NAS・サーバーの容量と接続要件、必要な管理機能を確認",
+            "映像共有・保存・管理サービスの機能と利用条件を確認"
+          ],
+          [
+            "運用・費用の確認",
+            "回収頻度、保存期間、閲覧権限、必要機器を整理して見積り",
+            "認証取得申請中・認可後販売予定。提供時期・通信条件とともに相談"
+          ]
+        ],
+        "links": [
+          "uses/body-harassment.html",
+          "contact.html"
+        ]
+      }
+    ]
   }
 }
