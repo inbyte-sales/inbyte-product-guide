@@ -12,7 +12,7 @@
 - [iシリーズ](faq/i-series.md)
 - [Qシリーズ](faq/q-series.md)
 - [PROTECT EYE](faq/protect-eye.md)
-- [障害物検知・接近警報レーダー](faq/radar.md)
+- [ミリ波レーダー（近接警戒装置）](faq/radar.md)
 - [AVIS・AI外観検査](faq/avis.md)
 - [業務用ボディカメラ](faq/body-camera.md)
 

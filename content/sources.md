@@ -10,6 +10,7 @@
 | AI検品システム「AVIS」のご案内 | 2026年8月／P4–10 | [公式情報](https://www.inbyte.jp/avis.php) |
 | AIカメラソリューション「Protect EYE」のご案内 | 2026年8月／P5–10 | [公式情報](https://www.inbyte.jp/protecteye.php) |
 | 業務用ボディカメラLinkFlowシリーズ | 2026年8月／P4–10 | [公式情報](https://www.inbyte.jp/linkflow.php) |
+| i7CV AIコーナービューシステム | INBYTE公式製品情報 | [公式情報](https://www.inbyte.jp/i7cv.html) |
 
 各製品ページに仕様と対応条件を掲載しています。用途ページでは、業種や課題に応じた活用方法を紹介しています。
 
