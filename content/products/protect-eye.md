@@ -8,7 +8,7 @@ PROTECT EYEは、市販のPoE対応ネットワークカメラの映像をエッ
 
 ## こんな用途に
 
-- [装備未着用・転倒・危険エリア侵入を検知したい](../uses/workplace.md)
+- [工場・作業現場の立入検知・安全監視｜PROTECT EYE](../uses/workplace.md)
 - [建設重機・作業現場の接触リスクを減らしたい](../uses/construction.md)
 
 ## 主な機能・構成
