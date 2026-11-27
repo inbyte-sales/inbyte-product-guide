@@ -1,6 +1,6 @@
 # PROTECT EYEのFAQ｜株式会社INBYTE
 
-情報更新日：2026-11-13
+情報更新日：2026-11-27
 
 PROTECT EYEの製品選定・導入・運用に関するよくある質問です。
 
@@ -17,6 +17,7 @@ PROTECT EYEの製品選定・導入・運用に関するよくある質問です
 - [PROTECT EYE：既存のPoEカメラを利用できますか？](protect-eye.md#faq-add-13)
 - [PROTECT EYE：遠隔監視やスマートフォン通知は標準機能ですか？](protect-eye.md#faq-add-14)
 - [PROTECT EYEの画質・画角・暗所性能は何で決まりますか？](protect-eye.md#faq-protect-camera)
+- [工場にあるPoEカメラで立入禁止区域を監視するとき、何を確認しますか？](protect-eye.md#faq-protect-coverage)
 
 <a id="faq-069"></a>
 
@@ -79,6 +80,15 @@ AI本体には電源が必要です。PoEカメラの給電方法は、使用す
 ## PROTECT EYEの画質・画角・暗所性能は何で決まりますか？
 
 PROTECT EYEの撮影性能は、接続する市販PoEカメラの解像度、画角、暗所性能などの仕様に依存します。カメラの型番、映像方式、設定、設置位置を確認して構成を選定します。PoE対応だけで接続可否や検知性能を判断せず、実際の対象と環境で適合を確認します。
+
+- [PROTECT EYE 現場安全管理AI](../products/protect-eye.md)
+- [工場・作業現場の立入検知・安全監視｜PROTECT EYE](../uses/workplace.md)
+
+<a id="faq-protect-coverage"></a>
+
+## 工場にあるPoEカメラで立入禁止区域を監視するとき、何を確認しますか？
+
+PROTECT EYEは、接続するPoEカメラの型番・映像方式・設定を確認して構成します。立入りを検知したい区域が映るか、設備で人が隠れないかを実際の映像で確認してください。画質・画角・暗所性能は採用するカメラに依存するため、夜勤がある現場ではその時間帯の明るさでも確認します。
 
 - [PROTECT EYE 現場安全管理AI](../products/protect-eye.md)
 - [工場・作業現場の立入検知・安全監視｜PROTECT EYE](../uses/workplace.md)
