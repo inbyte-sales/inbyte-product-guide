@@ -134,13 +134,14 @@
     {
       "id": "faq-body-cost",
       "category": "body-camera",
-      "question": "ボディカメラの価格・導入費用は、何を含めて比較すればよいですか？",
-      "answer": "導入費用は、本体の型番と台数、充電・転送機器、映像の保存先、必要な管理機能を分けて比較します。P3000・P3000Aは撮影する本体、P3000Dは最大4台の充電・データ転送に使う周辺機器です。既存PC・NAS・サーバーを使うか、追加機器が必要かも整理します。価格は必要な構成ごとに株式会社INBYTEが見積りをご案内します。通信対応モデルを検討する場合は、回線やサービスの利用条件も確認します。",
+      "question": "LINKFLOW P3000・P3000Aの価格はどう決まりますか？ 購入・レンタルの見積りに必要な情報は？",
+      "answer": "株式会社INBYTEが機種と構成ごとにお見積りします。購入の場合はP3000・P3000Aの希望台数、レンタルの場合は台数と利用期間をお知らせください。複数台の映像回収には、最大4台を充電・転送できるP3000Dと、保存先のPC・NASなどを構成に含めて比較できます。",
       "links": [
         "compare/body-camera.html",
         "products/p3000d.html",
         "contact.html"
-      ]
+      ],
+      "updated": "2026-11-27"
     },
     {
       "id": "faq-body-local-storage",
@@ -215,6 +216,66 @@
         "uses/body-harassment.html",
         "uses/remote-support.html"
       ]
+    },
+    {
+      "id": "faq-remote-site",
+      "category": "body-camera",
+      "question": "建設現場の遠隔臨場で、本部が映像を見ながら作業者と会話できますか？",
+      "answer": "LINKFLOW P1000 5Gは、現場の映像を5G・LTE回線で送り、本部と双方向で通話するモデルです。導入時は撮影場所の電波状況、同時に共有する現場数、閲覧者数、通信・クラウドの契約条件を確認します。現在は認証取得を申請中で、認可後に販売を開始する予定です。",
+      "links": [],
+      "updated": "2026-11-27"
+    },
+    {
+      "id": "faq-parking-power",
+      "category": "vehicle",
+      "question": "業務車両を停めている間も前後を記録するには、どの電源が必要ですか？",
+      "answer": "S-CREW ISDR-400の駐車録画には、別売の常時電源コードと車両への配線が必要です。駐車モードでは車両の電圧を監視し、設定に応じて電源を切ってバッテリーを保護します。記録したい時間帯と車両の電源条件を、取り付け前に確認してください。",
+      "links": [],
+      "updated": "2026-11-27"
+    },
+    {
+      "id": "faq-surround-review",
+      "category": "surround",
+      "question": "重機の周囲を上から確認し、作業後に死角の映像を振り返れますか？",
+      "answer": "SVI-8004は前後左右4台の映像を合成して運転席に360度の俯瞰映像を表示し、4方向の映像を別途用意するUSB記録媒体に録画します。作業後は、人と車両が近づいた方向や通路の見通しを映像で確認できます。俯瞰表示は合成映像のため、実際の距離は目視でも確認してください。",
+      "links": [],
+      "updated": "2026-11-27"
+    },
+    {
+      "id": "faq-truck-blind-spots",
+      "category": "i-series",
+      "question": "左折時の巻き込みと、発進時のトラック直前の死角を両方確認できますか？",
+      "answer": "iシリーズではi7CVが前方と左側方に各1台のカメラを備え、人・自転車・バイクを検知します。左折時はウインカーに連動し、検知に応じて警告音で運転者に知らせます。後退時の後方確認が中心ならi8、側方と後方の両方を確認する場合はi9が候補です。",
+      "links": [
+        "compare/i-series.html"
+      ],
+      "updated": "2026-11-27"
+    },
+    {
+      "id": "faq-radar-display",
+      "category": "radar",
+      "question": "重機の後方に物があるとき、運転席で距離の目安や映像を確認できますか？",
+      "answer": "ミリ波レーダーの近接警戒装置は、運転席で何を確認したいかで選べます。RODS-MCは最大10m、RODS-RL6は最大5.5mの範囲で接近を検知し、インジケーターで5段階表示します。RC-06C-ALLは最大5.5mの検知に加え、カメラ映像を7インチモニターで確認できます。検知範囲は対象物と取り付け条件で変わります。",
+      "links": [
+        "compare/radar.html"
+      ],
+      "updated": "2026-11-27"
+    },
+    {
+      "id": "faq-avis-offline",
+      "category": "avis",
+      "question": "外部ネットワークにつなげない製造ラインで、キズや欠品のAI外観検査はできますか？",
+      "answer": "AVISは、AIモデルの学習・調整をオンラインで行い、実装後は外部ネットワークに接続せずに検査できる構成に対応します。事前評価では良品・不良品サンプルと良否基準を用意し、実際のライン速度・照明条件で見逃しと過剰検出を確認します。",
+      "links": [],
+      "updated": "2026-11-27"
+    },
+    {
+      "id": "faq-protect-coverage",
+      "category": "protect-eye",
+      "question": "工場にあるPoEカメラで立入禁止区域を監視するとき、何を確認しますか？",
+      "answer": "PROTECT EYEは、接続するPoEカメラの型番・映像方式・設定を確認して構成します。立入りを検知したい区域が映るか、設備で人が隠れないかを実際の映像で確認してください。画質・画角・暗所性能は採用するカメラに依存するため、夜勤がある現場ではその時間帯の明るさでも確認します。",
+      "links": [],
+      "updated": "2026-11-27"
     }
   ],
   "products": {
@@ -262,38 +323,44 @@
       "faq-048"
     ],
     "svi-8004": [
+      "faq-surround-review",
       "faq-030",
       "faq-031",
       "faq-032"
     ],
     "rods-mc": [
+      "faq-radar-display",
       "faq-079",
       "faq-080",
       "faq-add-08",
       "faq-010"
     ],
     "rc-06c-all": [
+      "faq-radar-display",
       "faq-082",
       "faq-add-08",
       "faq-010"
     ],
     "rods-rl6": [
+      "faq-radar-display",
       "faq-083",
       "faq-084",
       "faq-085",
       "faq-010"
     ],
     "isdr-400": [
-      "faq-drive-recording",
-      "faq-006"
+      "faq-parking-power",
+      "faq-drive-recording"
     ],
     "protect-eye": [
+      "faq-protect-coverage",
       "faq-069",
       "faq-protect-camera",
       "faq-add-13",
       "faq-add-14"
     ],
     "avis": [
+      "faq-avis-offline",
       "faq-093",
       "faq-094",
       "faq-096",
@@ -301,12 +368,12 @@
       "faq-add-11"
     ],
     "linkflow": [
+      "faq-body-cost",
       "faq-body-kyt",
       "faq-body-ojt",
       "faq-add-02",
       "faq-add-05",
       "faq-add-06",
-      "faq-body-cost",
       "faq-body-local-storage",
       "faq-body-rollout"
     ],
@@ -335,10 +402,11 @@
       "faq-body-local-storage"
     ],
     "p1000-5g": [
-      "faq-add-06",
-      "faq-add-04"
+      "faq-remote-site",
+      "faq-add-06"
     ],
     "i7cv": [
+      "faq-truck-blind-spots",
       "faq-041",
       "faq-047",
       "faq-048"
@@ -351,6 +419,7 @@
       "faq-q-kyt"
     ],
     "truck": [
+      "faq-truck-blind-spots",
       "faq-040",
       "faq-043",
       "faq-048"
@@ -361,21 +430,25 @@
       "faq-add-07"
     ],
     "surround": [
+      "faq-surround-review",
       "faq-030",
       "faq-031",
       "faq-032"
     ],
     "radar": [
+      "faq-radar-display",
       "faq-add-07",
       "faq-add-08",
       "faq-010"
     ],
     "workplace": [
+      "faq-protect-coverage",
       "faq-069",
       "faq-protect-camera",
       "faq-add-14"
     ],
     "inspection": [
+      "faq-avis-offline",
       "faq-093",
       "faq-094",
       "faq-add-10",
@@ -392,10 +465,12 @@
       "faq-body-retention"
     ],
     "remote-support": [
+      "faq-remote-site",
       "faq-add-06",
       "faq-body-maintenance"
     ],
     "recording": [
+      "faq-parking-power",
       "faq-drive-recording",
       "faq-032"
     ],

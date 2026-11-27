@@ -82,7 +82,7 @@ for product in P.values():
  if product.get('sales_description'):blocks += sales_blocks(product['sales_description'])
  blocks += [h('こんな用途に'),ul([ulink(s) for s in product['uses']]),h('主な機能・構成'),ul(product['features']),h('仕様・対応条件'),table(['項目','内容'],product['specs']),h('導入・使用条件'),ul(product['conditions'])]
  blocks += faq_blocks('products',product['slug'])+source_blocks(product)+[h('関連する製品'),ul([plink(s) for s in product['related']])]
- add('products/'+product['slug']+'.html',product.get('page_title',product['name']),(product.get('sales_description','')+' '+product['summary']).strip(),blocks,product=product,modified=max(product.get('updated',config['updated']),faq_content['updated']))
+ add('products/'+product['slug']+'.html',product.get('page_title',product['name']),(product.get('sales_description','')+' '+product['summary']).strip(),blocks,product=product,modified=max(product.get('page_updated',config['updated']),product.get('updated',config['updated']),faq_content['updated']))
 for use in U.values():
  blocks=[p(use['summary'])]+[p(t) for t in use['body']]+[h('候補になる製品'),table(['製品','概要'],[[plink(s),P[s]['summary']] for s in use['products']])]
  blocks += selection_blocks('use_sections',use['slug'])
@@ -95,7 +95,7 @@ for use in U.values():
  blocks += faq_blocks('uses',use['slug'])+[h('導入相談で確認すること'),ul(use['questions']),p(a('製品の選び方と導入相談','contact.html'))]
  add('uses/'+use['slug']+'.html',use['title'],use['summary'],blocks,modified=max([faq_content['updated'],use.get('updated',config['updated'])]+[P[slug].get('updated',config['updated']) for slug in use['products']]))
 for comp in data['comparisons']:
- add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*(sales_blocks(comp['sales_description']) if comp.get('sales_description') else sales_blocks(sales['body_camera_description']) if comp['slug']=='body-camera' else []),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),*selection_blocks('comparison_sections',comp['slug']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])],modified=faq_content['updated'] if comp['slug'] in faq_content.get('comparison_sections',{}) else None)
+ add('compare/'+comp['slug']+'.html',comp['title'],comp['summary'],[p(comp['summary']),*(sales_blocks(comp['sales_description']) if comp.get('sales_description') else sales_blocks(sales['body_camera_description']) if comp['slug']=='body-camera' else []),table(comp['headers'],[[plink(row[0])]+row[1:] for row in comp['rows']]),p(comp['note']),*selection_blocks('comparison_sections',comp['slug']),h('用途に合わせて選ぶ'),ul([ulink(s) for s in sorted({u for row in comp['rows'] for u in P[row[0]]['uses']})]),h('出典'),p(data['sources'][comp['source']]['name']+'／'+data['sources'][comp['source']]['edition'])],modified=max(comp.get('updated',config['updated']),faq_content['updated'] if comp['slug'] in faq_content.get('comparison_sections',{}) else config['updated']))
 
 add('index.html','INBYTE 製品・用途ガイド','車両の安全確認、現場安全管理、AI外観検査、ボディカメラ。INBYTEの製品を用途・構成・仕様から選べます。',[
  p('車両の人身事故防止、作業現場の安全管理、製造ラインの検査、安全教育・点検・接客などの業務記録。解決したい課題から、INBYTEの製品と必要な構成を確認できます。'),
@@ -143,9 +143,9 @@ for slug,label in faq_categories.items():
   links=faq_detail_links(entry)
   if links:blocks += [ul(links)]
  blocks += sales_blocks()+[p(a('製品一覧','products.html'))]
- add('faq/'+slug+'.html',label+'のFAQ｜株式会社INBYTE',label+'のよくある質問に株式会社INBYTEがお答えします。',blocks,kind='FAQPage',modified=faq_content['updated'])
+ add('faq/'+slug+'.html',label+'のFAQ｜株式会社INBYTE',label+'のよくある質問に株式会社INBYTEがお答えします。',blocks,kind='FAQPage',modified=max([faq_content['updated']]+[entry.get('updated',faq_content['updated']) for entry in entries]))
  pages[-1]['faqs']=entries
-add('faq.html','INBYTE製品FAQ・Q&A｜仕様・用途・選び方','ボディカメラのKYT・技能継承、車両AIカメラの警報調整、PoEカメラ、AI外観検査など、製品仕様と用途の疑問に回答します。',[p('営業担当者・販売店・導入検討者が、製品仕様・用途・選び方を確認できるQ&Aです。質問ごとに回答と関連する製品・用途ページを掲載しています。'),h('分野から質問を探す'),ul([a(label,'faq/'+slug+'.html') for slug,label in faq_categories.items()]),h('用途・課題から質問を探す'),ul([faq_link(f['id']) for f in faq_content['faqs']]),h('機種の選定・運用でよくある質問'),ul([faq_link(fid) for fid in ['faq-add-02','faq-052','faq-057','faq-add-07','faq-add-05','faq-add-06','faq-010','faq-add-10']]),*sales_blocks()],kind='CollectionPage',modified=faq_content['updated'])
+add('faq.html','INBYTE製品FAQ・Q&A｜仕様・用途・選び方','ボディカメラのKYT・技能継承、車両AIカメラの警報調整、PoEカメラ、AI外観検査など、製品仕様と用途の疑問に回答します。',[p('営業担当者・販売店・導入検討者が、製品仕様・用途・選び方を確認できるQ&Aです。質問ごとに回答と関連する製品・用途ページを掲載しています。'),h('分野から質問を探す'),ul([a(label,'faq/'+slug+'.html') for slug,label in faq_categories.items()]),h('用途・課題から質問を探す'),ul([faq_link(f['id']) for f in faq_content['faqs']]),h('機種の選定・運用でよくある質問'),ul([faq_link(fid) for fid in ['faq-add-02','faq-052','faq-057','faq-add-07','faq-add-05','faq-add-06','faq-010','faq-add-10']]),*sales_blocks()],kind='CollectionPage',modified=max(entry.get('updated',faq_content['updated']) for entry in faq_content['faqs']))
 
 add('sitemap.html','サイト内ページ一覧','製品情報、用途別ガイド、比較表、資料案内の全ページへ直接アクセスできます。',[h('製品・機種'),ul([plink(s) for s in P]),h('用途'),ul([ulink(s) for s in U]),h('比較'),ul([a(c['title'],'compare/'+c['slug']+'.html') for c in data['comparisons']]),h('案内'),ul([a('トップ','index.html'),a('よくある質問','faq.html'),a('製品一覧','products.html'),a('用途一覧','uses.html'),a('比較一覧','compare.html'),a('INBYTEについて','about.html'),a('販売パートナー募集','partners.html'),a('この製品ガイドについて','sources.html'),a('導入相談','contact.html')])],kind='CollectionPage')
 
@@ -208,7 +208,7 @@ def build(out,base,production):
     web['about']={'@type':'Thing','name':prod['name'],'alternateName':prod['model'],'description':prod['summary']}
    graph += [org,web,{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':t,'item':urljoin(base,href)} for i,(t,href) in enumerate(crumb)]}]
   schema='<script type="application/ld+json">'+json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False).replace('<','\\u003c')+'</script>' if graph else ''
-  title=page['title']+(' | INBYTE' if path!='index.html' else '')
+  title=page['title']+(' | INBYTE' if path!='index.html' and not page['title'].endswith('INBYTE') else '')
   meta=f'<meta name="description" content="{escape(page["description"],quote=True)}"><meta name="robots" content="index,follow,max-image-preview:large">'
   meta+=f'<link rel="alternate" type="text/markdown" href="{relative(path.removesuffix(".html")+".md",path)}"><link rel="describedby" href="{relative("llms.txt",path)}">'
   if path=='index.html':meta+='<meta name="msvalidate.01" content="7FB0B56E8C5F80ECDBC38B41959C794C">'
