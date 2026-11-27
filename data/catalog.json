@@ -109,7 +109,9 @@
       "status": "製品情報",
       "model": "QX",
       "updated": "2026-09-28",
-      "sales_description": "株式会社INBYTEは、QX 人身事故防止AIカメラの販売・導入相談を承っています。"
+      "sales_description": "株式会社INBYTEは、QX 人身事故防止AIカメラの販売・導入相談を承っています。",
+      "page_title": "QX｜4カメラ・9インチHDモニターの人物検知と録画",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "q7",
@@ -220,7 +222,9 @@
       "status": "製品情報",
       "model": "Q7",
       "updated": "2026-09-28",
-      "sales_description": "株式会社INBYTEは、Q7 人身事故防止AIカメラの販売・導入相談を承っています。"
+      "sales_description": "株式会社INBYTEは、Q7 人身事故防止AIカメラの販売・導入相談を承っています。",
+      "page_title": "Q7｜4カメラ・7インチモニターの人物検知と録画",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "q4",
@@ -870,7 +874,9 @@
       ],
       "status": "製品情報",
       "model": "SVI-8004 AIサラウンドカメラ",
-      "updated": "2026-09-15"
+      "updated": "2026-09-15",
+      "page_title": "SVI-8004｜重機・トラックの周囲を俯瞰表示し、4方向を録画するAIカメラ",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "rods-mc",
@@ -964,7 +970,8 @@
       "status": "製品情報",
       "model": "RODS-MC 接近警報レーダー",
       "updated": "2026-11-27",
-      "sales_description": "株式会社INBYTEは、RODS-MC 接近警報レーダーの販売・導入相談を承っています。"
+      "sales_description": "株式会社INBYTEは、RODS-MC 接近警報レーダーの販売・導入相談を承っています。",
+      "page_title": "RODS-MC｜最大10mのミリ波レーダー近接警戒装置"
     },
     {
       "slug": "rc-06c-all",
@@ -1070,7 +1077,8 @@
       "status": "製品情報",
       "model": "RC-06C-ALL 接近警報レーダー",
       "updated": "2026-11-27",
-      "sales_description": "株式会社INBYTEは、RC-06C-ALL 接近警報レーダーの販売・導入相談を承っています。"
+      "sales_description": "株式会社INBYTEは、RC-06C-ALL 接近警報レーダーの販売・導入相談を承っています。",
+      "page_title": "RC-06C-ALL｜カメラ・モニター付きミリ波レーダー近接警戒装置"
     },
     {
       "slug": "rods-rl6",
@@ -1165,7 +1173,8 @@
       "status": "製品情報",
       "model": "RODS-RL6 接近警報レーダー",
       "updated": "2026-11-27",
-      "sales_description": "株式会社INBYTEは、RODS-RL6 接近警報レーダーの販売・導入相談を承っています。"
+      "sales_description": "株式会社INBYTEは、RODS-RL6 接近警報レーダーの販売・導入相談を承っています。",
+      "page_title": "RODS-RL6｜最大5.5m・インジケーター式のミリ波レーダー近接警戒装置"
     },
     {
       "slug": "isdr-400",
@@ -1270,7 +1279,8 @@
       ],
       "status": "製品情報",
       "model": "S-CREW ISDR-400 ドライブレコーダー",
-      "updated": "2026-09-15"
+      "updated": "2026-09-15",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "protect-eye",
@@ -1356,7 +1366,8 @@
       ],
       "status": "製品情報",
       "model": "PTE-01",
-      "updated": "2026-09-15"
+      "updated": "2026-09-15",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "avis",
@@ -1431,7 +1442,8 @@
       "model": "AVIS",
       "updated": "2026-09-28",
       "sales_description": "株式会社INBYTEは、製造ラインの検品を支援するAI外観検査システム「AVIS」の導入相談を承っています。",
-      "page_title": "AVIS AI外観検査システムの機能・導入条件｜株式会社INBYTE"
+      "page_title": "AVIS AI外観検査システムの機能・導入条件｜株式会社INBYTE",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "linkflow",
@@ -1496,8 +1508,9 @@
       "status": "製品情報",
       "model": "LINKFLOW",
       "updated": "2026-10-13",
-      "sales_description": "LINKFLOW P3000シリーズの業務用ボディカメラP3000・P3000Aと専用クレードルP3000Dは、株式会社INBYTEが日本国内で販売しています。購入・見積り・納期・導入相談はINBYTEへお問い合わせください。",
-      "page_title": "LINKFLOW P3000シリーズ｜業務用ボディカメラ"
+      "sales_description": "LINKFLOW P3000シリーズの国内販売元は株式会社INBYTEです。価格は、本体の機種・台数、充電・転送機器、映像の保存先に合わせて個別にお見積りします。購入をご希望の場合は使用台数、レンタルをご希望の場合は台数と利用期間をお知らせください。",
+      "page_title": "LINKFLOW P3000シリーズの価格・見積りと機種比較",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "p3000",
@@ -1586,7 +1599,8 @@
       "model": "P3000",
       "updated": "2026-10-13",
       "sales_description": "LINKFLOW P3000シリーズのボディカメラP3000は、株式会社INBYTEが日本国内で販売しています。購入・見積り・納期・導入相談はINBYTEへお問い合わせください。",
-      "page_title": "LINKFLOW P3000｜業務用ボディカメラ"
+      "page_title": "LINKFLOW P3000｜業務用ボディカメラ",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "p3000a",
@@ -1696,7 +1710,8 @@
       "model": "P3000A",
       "updated": "2026-10-13",
       "sales_description": "LINKFLOW P3000シリーズのボディカメラP3000Aは、株式会社INBYTEが日本国内で販売しています。購入・見積り・納期・導入相談はINBYTEへお問い合わせください。",
-      "page_title": "LINKFLOW P3000A｜広角ボディカメラ"
+      "page_title": "LINKFLOW P3000A｜広角ボディカメラ",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "p3000d",
@@ -1779,7 +1794,8 @@
       "model": "LF-P3000D",
       "updated": "2026-10-13",
       "sales_description": "LINKFLOW P3000シリーズ用の専用クレードルP3000Dは、株式会社INBYTEが日本国内で販売しています。購入・見積り・納期・導入相談はINBYTEへお問い合わせください。",
-      "page_title": "LINKFLOW P3000D｜P3000シリーズ用クレードル"
+      "page_title": "LINKFLOW P3000D｜P3000シリーズ用クレードル",
+      "page_updated": "2026-11-27"
     },
     {
       "slug": "p1000-5g",
@@ -1833,7 +1849,8 @@
       "status": "発売予定",
       "model": "P1000 5G",
       "updated": "2026-09-24",
-      "sales_description": "LINKFLOW P1000 5G 遠隔映像共有カメラの発売・導入相談窓口は株式会社INBYTEです。発売時期・価格・納期はお問い合わせください。"
+      "sales_description": "LINKFLOW P1000 5G 遠隔映像共有カメラの発売・導入相談窓口は株式会社INBYTEです。発売時期・価格・納期はお問い合わせください。",
+      "page_updated": "2026-11-27"
     }
   ],
   "uses": [
@@ -1897,7 +1914,8 @@
         "safety-review"
       ],
       "group": "車両の人身事故防止と安全活動",
-      "sales_description": "製品の選定・購入・導入については、販売企業の株式会社INBYTEへご相談ください。車両や設置環境に合う構成をご案内します。"
+      "sales_description": "製品の選定・購入・導入については、販売企業の株式会社INBYTEへご相談ください。車両や設置環境に合う構成をご案内します。",
+      "updated": "2026-11-27"
     },
     {
       "slug": "construction",
@@ -1958,7 +1976,8 @@
         "safety-review"
       ],
       "group": "車両の人身事故防止と安全活動",
-      "sales_description": "製品の選定・購入・導入については、販売企業の株式会社INBYTEへご相談ください。車両や設置環境に合う構成をご案内します。"
+      "sales_description": "製品の選定・購入・導入については、販売企業の株式会社INBYTEへご相談ください。車両や設置環境に合う構成をご案内します。",
+      "updated": "2026-11-27"
     },
     {
       "slug": "radar",
@@ -1985,7 +2004,8 @@
       "related_uses": [
         "vehicle-person-safety"
       ],
-      "sales_description": "製品の選定・購入・導入については、販売企業の株式会社INBYTEへご相談ください。車両や設置環境に合う構成をご案内します。"
+      "sales_description": "製品の選定・購入・導入については、販売企業の株式会社INBYTEへご相談ください。車両や設置環境に合う構成をご案内します。",
+      "updated": "2026-11-27"
     },
     {
       "slug": "workplace",
@@ -2005,7 +2025,8 @@
         "protect-eye"
       ],
       "comparison": null,
-      "group": "現場管理・AI外観検査"
+      "group": "現場管理・AI外観検査",
+      "updated": "2026-11-27"
     },
     {
       "slug": "inspection",
@@ -2026,7 +2047,8 @@
       ],
       "comparison": null,
       "group": "現場管理・AI外観検査",
-      "sales_description": "株式会社INBYTEが、AVISの検査対象・設置環境に応じた導入相談を承ります。"
+      "sales_description": "株式会社INBYTEが、AVISの検査対象・設置環境に応じた導入相談を承ります。",
+      "updated": "2026-11-27"
     },
     {
       "slug": "body-camera",
@@ -2069,7 +2091,7 @@
         "safety-review"
       ],
       "group": "ボディカメラの業務活用",
-      "updated": "2026-11-09"
+      "updated": "2026-11-27"
     },
     {
       "slug": "remote-support",
@@ -2090,7 +2112,8 @@
         "linkflow"
       ],
       "comparison": "body-camera",
-      "group": "ボディカメラの業務活用"
+      "group": "ボディカメラの業務活用",
+      "updated": "2026-11-27"
     },
     {
       "slug": "recording",
@@ -2110,7 +2133,8 @@
         "svi-8004"
       ],
       "comparison": null,
-      "group": "車両の人身事故防止と安全活動"
+      "group": "車両の人身事故防止と安全活動",
+      "updated": "2026-11-27"
     },
     {
       "slug": "body-safety",
@@ -2258,7 +2282,8 @@
         "body-camera",
         "safety-review",
         "remote-support"
-      ]
+      ],
+      "updated": "2026-11-27"
     },
     {
       "slug": "body-maintenance",
@@ -2602,7 +2627,8 @@
       ],
       "note": "QXは9インチ、Q7は7インチです。QX・Q7の録画は安全活動、環境改善、KYTに活用できます。警報距離と車両信号の連動は、現場の人の動線と車両の動きに合わせて確認します。",
       "source": "catalog",
-      "sales_description": "株式会社INBYTEが販売・導入相談を承ります。検知対象、設置条件、必要な機能から製品をお選びください。"
+      "sales_description": "株式会社INBYTEが販売・導入相談を承ります。検知対象、設置条件、必要な機能から製品をお選びください。",
+      "updated": "2026-11-27"
     },
     {
       "slug": "i-series",
@@ -2654,7 +2680,8 @@
       ],
       "note": "各構成の検知対象と取り付け位置を確認してください。i7CVは前方200万画素、側方100万画素のカメラを備えます。",
       "source": "catalog",
-      "sales_description": "株式会社INBYTEが販売・導入相談を承ります。検知対象、設置条件、必要な機能から製品をお選びください。"
+      "sales_description": "株式会社INBYTEが販売・導入相談を承ります。検知対象、設置条件、必要な機能から製品をお選びください。",
+      "updated": "2026-11-27"
     },
     {
       "slug": "radar",
@@ -2688,7 +2715,8 @@
       ],
       "note": "3製品はNETIS登録番号KT-260008の対象です。検知範囲は対象物・設置条件によって変わります。設置後に検知と警報の動作を確認してください。",
       "source": "catalog",
-      "sales_description": "株式会社INBYTEが販売・導入相談を承ります。検知対象、設置条件、必要な機能から製品をお選びください。"
+      "sales_description": "株式会社INBYTEが販売・導入相談を承ります。検知対象、設置条件、必要な機能から製品をお選びください。",
+      "updated": "2026-11-27"
     },
     {
       "slug": "body-camera",
