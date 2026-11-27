@@ -14,7 +14,7 @@ LINKFLOW P3000シリーズ（P3000 series）の業務用ボディカメラP3000�
 
 株式会社INBYTEは産業用カメラ・車両安全機器の販売パートナーを募集しています。取扱い条件、OEM・カスタム開発は個別にご相談ください。
 
-情報更新日：2026-11-13
+情報更新日：2026-11-27
 
 ## 案内
 
@@ -32,9 +32,9 @@ LINKFLOW P3000シリーズ（P3000 series）の業務用ボディカメラP3000�
 
 ## 用途から探す
 
-- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/uses/radar.md)
+- [車両・重機用ミリ波レーダー（近接警戒装置）｜INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/uses/radar.md)
 
-- [装備未着用・転倒・危険エリア侵入を検知したい](https://inbyte-sales.github.io/inbyte-product-guide/uses/workplace.md)
+- [工場・作業現場の立入検知・安全監視｜PROTECT EYE](https://inbyte-sales.github.io/inbyte-product-guide/uses/workplace.md)
 
 - [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/uses/inspection.md)
 
@@ -48,13 +48,15 @@ LINKFLOW P3000シリーズ（P3000 series）の業務用ボディカメラP3000�
 
 - [Q7 人身事故防止AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/q7.md)
 
-- [Q4 人身事故防止AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/q4.md)
+- [Q4｜2カメラ・赤外線LEDの人身事故防止AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/q4.md)
 
-- [Q5 人身事故防止AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/q5.md)
+- [Q5｜1カメラの人身事故防止AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/q5.md)
 
 - [i7 側方事故対策AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/i7.md)
 
 - [i7P 両側方事故対策AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/i7p.md)
+
+- [i7CV｜トラックの前方・左側方の死角対策AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/i7cv.md)
 
 - [i8 後方事故対策AIカメラ](https://inbyte-sales.github.io/inbyte-product-guide/products/i8.md)
 
@@ -88,9 +90,9 @@ LINKFLOW P3000シリーズ（P3000 series）の業務用ボディカメラP3000�
 
 - [Qシリーズ比較：人身事故防止・警報範囲・録画で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/q-series.md)
 
-- [iシリーズ比較：側方・両側方・後方で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/i-series.md)
+- [iシリーズ比較：前方・側方・後方の確認範囲で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/i-series.md)
 
-- [接近警報レーダー比較：映像確認と検知距離で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/radar.md)
+- [ミリ波レーダー（近接警戒装置）比較｜検知距離・映像確認で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/radar.md)
 
 - [LINKFLOW比較：記録・管理・遠隔共有で選ぶ](https://inbyte-sales.github.io/inbyte-product-guide/compare/body-camera.md)
 
@@ -106,7 +108,7 @@ LINKFLOW P3000シリーズ（P3000 series）の業務用ボディカメラP3000�
 
 - [PROTECT EYEのFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/protect-eye.md)
 
-- [障害物検知・接近警報レーダーのFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/radar.md)
+- [ミリ波レーダー（近接警戒装置）のFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/radar.md)
 
 - [AVIS・AI外観検査のFAQ｜株式会社INBYTE](https://inbyte-sales.github.io/inbyte-product-guide/faq/avis.md)
 
