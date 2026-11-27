@@ -90,7 +90,7 @@
 - [RODS-MC 接近警報レーダー](../products/rods-mc.md)
 - [RC-06C-ALL 接近警報レーダー](../products/rc-06c-all.md)
 - [RODS-RL6 接近警報レーダー](../products/rods-rl6.md)
-- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](../uses/radar.md)
+- [車両・重機用ミリ波レーダー（近接警戒装置）｜INBYTE](../uses/radar.md)
 
 <a id="faq-011"></a>
 

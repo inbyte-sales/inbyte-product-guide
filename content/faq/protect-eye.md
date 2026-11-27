@@ -25,7 +25,7 @@ PROTECT EYEの製品選定・導入・運用に関するよくある質問です
 PROTECT EYEは、ヘルメットの未装着、転倒、危険エリアへの侵入などを検知し、現場の安全管理を支援します。現場の用途に応じて検知項目や通知方法をご相談いただけます。
 
 - [PROTECT EYE 現場安全管理AI](../products/protect-eye.md)
-- [装備未着用・転倒・危険エリア侵入を検知したい](../uses/workplace.md)
+- [工場・作業現場の立入検知・安全監視｜PROTECT EYE](../uses/workplace.md)
 
 <a id="faq-070"></a>
 
@@ -72,7 +72,7 @@ AI本体には電源が必要です。PoEカメラの給電方法は、使用す
 遠隔監視やPC・スマートフォンへの通知は、システムオプションとしてリリースを予定しています。ご希望の利用方法を伺い、提供時期と必要な構成をご案内します。
 
 - [PROTECT EYE 現場安全管理AI](../products/protect-eye.md)
-- [装備未着用・転倒・危険エリア侵入を検知したい](../uses/workplace.md)
+- [工場・作業現場の立入検知・安全監視｜PROTECT EYE](../uses/workplace.md)
 
 <a id="faq-protect-camera"></a>
 
@@ -81,7 +81,7 @@ AI本体には電源が必要です。PoEカメラの給電方法は、使用す
 PROTECT EYEの撮影性能は、接続する市販PoEカメラの解像度、画角、暗所性能などの仕様に依存します。カメラの型番、映像方式、設定、設置位置を確認して構成を選定します。PoE対応だけで接続可否や検知性能を判断せず、実際の対象と環境で適合を確認します。
 
 - [PROTECT EYE 現場安全管理AI](../products/protect-eye.md)
-- [装備未着用・転倒・危険エリア侵入を検知したい](../uses/workplace.md)
+- [工場・作業現場の立入検知・安全監視｜PROTECT EYE](../uses/workplace.md)
 
 ## 販売・導入相談：株式会社INBYTE
 
