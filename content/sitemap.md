@@ -10,6 +10,7 @@
 - [Q5 人身事故防止AIカメラ](products/q5.md)
 - [i7 側方事故対策AIカメラ](products/i7.md)
 - [i7P 両側方事故対策AIカメラ](products/i7p.md)
+- [i7CV AIコーナービューシステム](products/i7cv.md)
 - [i8 後方事故対策AIカメラ](products/i8.md)
 - [i9 側方＋後方事故対策AIカメラ](products/i9.md)
 - [SVI-8004 AIサラウンドカメラ](products/svi-8004.md)
@@ -28,11 +29,11 @@
 ## 用途
 
 - [フォークリフトの人への接近を検知したい](uses/forklift.md)
-- [トラック・バスの側方と後方を確認したい](uses/truck.md)
+- [トラック・バスの前方・側方・後方の死角対策](uses/truck.md)
 - [建設重機・作業現場の接触リスクを減らしたい](uses/construction.md)
 - [車両周囲を360度の俯瞰映像で確認したい](uses/surround.md)
-- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](uses/radar.md)
-- [装備未着用・転倒・危険エリア侵入を検知したい](uses/workplace.md)
+- [車両・重機用ミリ波レーダー（近接警戒装置）｜INBYTE](uses/radar.md)
+- [工場・作業現場の立入検知・安全監視｜PROTECT EYE](uses/workplace.md)
 - [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](uses/inspection.md)
 - [業務用ボディカメラの製品案内・購入相談｜株式会社INBYTE](uses/body-camera.md)
 - [現場映像を共有して遠隔支援したい](uses/remote-support.md)
@@ -53,8 +54,8 @@
 ## 比較
 
 - [Qシリーズ比較：人身事故防止・警報範囲・録画で選ぶ](compare/q-series.md)
-- [iシリーズ比較：側方・両側方・後方で選ぶ](compare/i-series.md)
-- [接近警報レーダー比較：映像確認と検知距離で選ぶ](compare/radar.md)
+- [iシリーズ比較：前方・側方・後方の確認範囲で選ぶ](compare/i-series.md)
+- [ミリ波レーダー（近接警戒装置）比較｜検知距離・映像確認で選ぶ](compare/radar.md)
 - [LINKFLOW比較：記録・管理・遠隔共有で選ぶ](compare/body-camera.md)
 
 ## 案内

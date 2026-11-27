@@ -14,16 +14,16 @@
 
 - [業務用ボディカメラの製品案内・購入相談｜株式会社INBYTE](uses/body-camera.md)
 - [車両用AIカメラ・人物検知による事故防止支援｜株式会社INBYTE](uses/vehicle-person-safety.md)
-- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](uses/radar.md)
+- [車両・重機用ミリ波レーダー（近接警戒装置）｜INBYTE](uses/radar.md)
 - [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](uses/inspection.md)
 
 ## 車両の人身事故防止と安全活動
 
 - [フォークリフトの人への接近を検知したい](uses/forklift.md)
-- [トラック・バスの側方と後方を確認したい](uses/truck.md)
+- [トラック・バスの前方・側方・後方の死角対策](uses/truck.md)
 - [建設重機・作業現場の接触リスクを減らしたい](uses/construction.md)
 - [車両周囲を360度の俯瞰映像で確認したい](uses/surround.md)
-- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](uses/radar.md)
+- [車両・重機用ミリ波レーダー（近接警戒装置）｜INBYTE](uses/radar.md)
 - [車両の前後映像・駐車中の状況を記録したい](uses/recording.md)
 - [録画を安全活動・KYT・環境改善・QC活動に活用する](uses/safety-review.md)
 - [車両用AIカメラ・人物検知による事故防止支援｜株式会社INBYTE](uses/vehicle-person-safety.md)
@@ -31,7 +31,7 @@
 
 ## 現場管理・AI外観検査
 
-- [装備未着用・転倒・危険エリア侵入を検知したい](uses/workplace.md)
+- [工場・作業現場の立入検知・安全監視｜PROTECT EYE](uses/workplace.md)
 - [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](uses/inspection.md)
 
 ## ボディカメラの業務活用
@@ -51,8 +51,8 @@
 ## 製品を比較する
 
 - [Qシリーズ比較：人身事故防止・警報範囲・録画で選ぶ](compare/q-series.md)
-- [iシリーズ比較：側方・両側方・後方で選ぶ](compare/i-series.md)
-- [接近警報レーダー比較：映像確認と検知距離で選ぶ](compare/radar.md)
+- [iシリーズ比較：前方・側方・後方の確認範囲で選ぶ](compare/i-series.md)
+- [ミリ波レーダー（近接警戒装置）比較｜検知距離・映像確認で選ぶ](compare/radar.md)
 - [LINKFLOW比較：記録・管理・遠隔共有で選ぶ](compare/body-camera.md)
 
 ## 製品選定でよくある質問
@@ -74,12 +74,13 @@
 | [Q5 人身事故防止AIカメラ](products/q5.md) | Qシリーズ |
 | [i7 側方事故対策AIカメラ](products/i7.md) | iシリーズ |
 | [i7P 両側方事故対策AIカメラ](products/i7p.md) | iシリーズ |
+| [i7CV AIコーナービューシステム](products/i7cv.md) | iシリーズ |
 | [i8 後方事故対策AIカメラ](products/i8.md) | iシリーズ |
 | [i9 側方＋後方事故対策AIカメラ](products/i9.md) | iシリーズ |
 | [SVI-8004 AIサラウンドカメラ](products/svi-8004.md) | サラウンドカメラ |
-| [RODS-MC 接近警報レーダー](products/rods-mc.md) | 接近警報レーダー |
-| [RC-06C-ALL 接近警報レーダー](products/rc-06c-all.md) | 接近警報レーダー |
-| [RODS-RL6 接近警報レーダー](products/rods-rl6.md) | 接近警報レーダー |
+| [RODS-MC 接近警報レーダー](products/rods-mc.md) | ミリ波レーダー（近接警戒装置） |
+| [RC-06C-ALL 接近警報レーダー](products/rc-06c-all.md) | ミリ波レーダー（近接警戒装置） |
+| [RODS-RL6 接近警報レーダー](products/rods-rl6.md) | ミリ波レーダー（近接警戒装置） |
 | [S-CREW ISDR-400 ドライブレコーダー](products/isdr-400.md) | ドライブレコーダー |
 | [PROTECT EYE 現場安全管理AI](products/protect-eye.md) | 現場安全管理AI |
 | [AVIS AI外観検査システム](products/avis.md) | AI外観検査 |

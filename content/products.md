@@ -21,6 +21,7 @@
 
 - [i7 側方事故対策AIカメラ](products/i7.md)
 - [i7P 両側方事故対策AIカメラ](products/i7p.md)
+- [i7CV AIコーナービューシステム](products/i7cv.md)
 - [i8 後方事故対策AIカメラ](products/i8.md)
 - [i9 側方＋後方事故対策AIカメラ](products/i9.md)
 
@@ -28,7 +29,7 @@
 
 - [SVI-8004 AIサラウンドカメラ](products/svi-8004.md)
 
-## 接近警報レーダー
+## ミリ波レーダー（近接警戒装置）
 
 - [RODS-MC 接近警報レーダー](products/rods-mc.md)
 - [RC-06C-ALL 接近警報レーダー](products/rc-06c-all.md)

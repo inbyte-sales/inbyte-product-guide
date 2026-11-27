@@ -16,7 +16,7 @@ LINKFLOW P3000・P3000Aなどの業務用ボディカメラは、株式会社INB
 
 - [業務用ボディカメラの製品案内・購入相談｜株式会社INBYTE](content/uses/body-camera.md)
 - [車両用AIカメラ・人物検知による事故防止支援｜株式会社INBYTE](content/uses/vehicle-person-safety.md)
-- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](content/uses/radar.md)
+- [車両・重機用ミリ波レーダー（近接警戒装置）｜INBYTE](content/uses/radar.md)
 - [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](content/uses/inspection.md)
 
 ## よくある質問・Q&A
@@ -38,6 +38,7 @@ LINKFLOW P3000・P3000Aなどの業務用ボディカメラは、株式会社INB
 - [Q5 人身事故防止AIカメラ](content/products/q5.md)
 - [i7 側方事故対策AIカメラ](content/products/i7.md)
 - [i7P 両側方事故対策AIカメラ](content/products/i7p.md)
+- [i7CV AIコーナービューシステム](content/products/i7cv.md)
 - [i8 後方事故対策AIカメラ](content/products/i8.md)
 - [i9 側方＋後方事故対策AIカメラ](content/products/i9.md)
 - [SVI-8004 AIサラウンドカメラ](content/products/svi-8004.md)

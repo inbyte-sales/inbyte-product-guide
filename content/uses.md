@@ -7,10 +7,10 @@
 ## 車両の人身事故防止と安全活動
 
 - [フォークリフトの人への接近を検知したい](uses/forklift.md)
-- [トラック・バスの側方と後方を確認したい](uses/truck.md)
+- [トラック・バスの前方・側方・後方の死角対策](uses/truck.md)
 - [建設重機・作業現場の接触リスクを減らしたい](uses/construction.md)
 - [車両周囲を360度の俯瞰映像で確認したい](uses/surround.md)
-- [車両用障害物検知・接近警報レーダー｜株式会社INBYTE](uses/radar.md)
+- [車両・重機用ミリ波レーダー（近接警戒装置）｜INBYTE](uses/radar.md)
 - [車両の前後映像・駐車中の状況を記録したい](uses/recording.md)
 - [録画を安全活動・KYT・環境改善・QC活動に活用する](uses/safety-review.md)
 - [車両用AIカメラ・人物検知による事故防止支援｜株式会社INBYTE](uses/vehicle-person-safety.md)
@@ -18,7 +18,7 @@
 
 ## 現場管理・AI外観検査
 
-- [装備未着用・転倒・危険エリア侵入を検知したい](uses/workplace.md)
+- [工場・作業現場の立入検知・安全監視｜PROTECT EYE](uses/workplace.md)
 - [AI外観検査・目視検査の自動化｜AVIS｜株式会社INBYTE](uses/inspection.md)
 
 ## ボディカメラの業務活用
