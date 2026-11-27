@@ -249,11 +249,18 @@ def build(out,base,production):
   robots+='\nSitemap: '+urljoin(base,'sitemap.xml')+'\n'
   ET.register_namespace('','http://www.sitemaps.org/schemas/sitemap/0.9')
   root=ET.Element('{http://www.sitemaps.org/schemas/sitemap/0.9}urlset')
+  sitemap_urls = []
   for page in pages:
-   node=ET.SubElement(root,'url');ET.SubElement(node,'loc').text=urljoin(base,page['path']);ET.SubElement(node,'lastmod').text=page['modified']
+   url = urljoin(base, page['path'])
+   node = ET.SubElement(root, 'url')
+   ET.SubElement(node, 'loc').text = url
+   ET.SubElement(node, 'lastmod').text = page['modified']
+   sitemap_urls.append(url)
+  (out/'sitemap.txt').write_text('\n'.join(sitemap_urls)+'\n', encoding='utf-8', newline='\n')
   ET.ElementTree(root).write(out/'sitemap.xml',encoding='utf-8',xml_declaration=True)
  else:
-  if (out/'sitemap.xml').exists():(out/'sitemap.xml').unlink()
+  for filename in ('sitemap.xml', 'sitemap.txt'):
+   (out/filename).unlink(missing_ok=True)
  (out/'robots.txt').write_text(robots,encoding='utf-8')
  (ROOT/'build-info.json').write_text(json.dumps({'base_url':base,'production':production,'pages':len(pages),'updated':max(page['modified'] for page in pages)},ensure_ascii=False,indent=2),encoding='utf-8')
  # Root README remains readable as the GitHub repository landing page.
@@ -320,6 +327,8 @@ def validate(out,base,production):
  if production:
   doc=ET.parse(out/'sitemap.xml');urls={e.text for e in doc.iter() if e.tag.endswith('loc')}
   assert urls=={urljoin(base,p['path']) for p in pages},'sitemap mismatch'
+  text_urls = (out/'sitemap.txt').read_text(encoding='utf-8').splitlines()
+  assert len(text_urls) == len(urls) and set(text_urls) == urls, 'text sitemap mismatch'
   assert 'Sitemap: '+urljoin(base,'sitemap.xml') in (out/'robots.txt').read_text(),'robots sitemap'
  report={'html_pages':len(pages),'product_pages':len(P),'use_pages':len(U),'comparisons':len(data['comparisons']),'internal_links':'PASS','markdown_links':'PASS','unique_titles':'PASS','one_h1':'PASS','all_pages_reachable':'PASS','max_click_depth':max(depth.values()),'canonical_and_sitemap':'PASS' if production else 'Generated during production build after URL is known','structured_data':'PASS' if production else 'Generated during production build after URL is known','external_links':'Not checked by this offline validator','base_url':base}
  (ROOT/'validation-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
